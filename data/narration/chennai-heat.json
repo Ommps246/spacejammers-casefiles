@@ -1,0 +1,30 @@
+{
+  "case_id": "chennai-heat",
+  "headline": "Chennai shows slight warming, but not enough to call it yet",
+  "summary": "Evidence gathered; it can’t yet be told apart from chance.",
+  "verdict": "Inconclusive is a finding, not a failure. The evidence is on file; it just doesn’t clear the bar to rule out chance. We’d rather say so than overstate it.",
+  "strength": "inconclusive",
+  "evidence_notes": {
+    "temp_trend": "Chennai’s yearly average may have edged up slightly since 1981, but the signal fades once we allow for asking several questions of the same data.",
+    "hot_days": "Very hot days may be slightly fewer, but it isn’t a clear trend. That’s the opposite of what you’d expect, so it’s worth a second look.",
+    "temp_shift": "There may be a step up from 1997 onward (+0.21 °C vs. the years before), but it could be chance: a lead to follow, not a finding.",
+    "global_context": "For comparison: Earth as a whole warmed clearly and steadily over the same years."
+  },
+  "suspects": [
+    {
+      "suspect": "Rainfall variability",
+      "description": "Do drier months explain warm months? We line up rain and temperature month by month. A match would show they move together, not that one causes the other.",
+      "finding": "Unclear: drier months line up only weakly with warmer ones (r = −0.21 in the same month), so rainfall explains little of the change."
+    }
+  ],
+  "devils_advocate": "This data averages a ~50 km area and blends satellite and model inputs, so it can hide city-scale heat. The 1997 shift could reflect a natural swing or a change in the satellites feeding the model, not a real turning point.",
+  "devils_advocate_note": "We keep this objection on the record. It is why the verdict stays Inconclusive.",
+  "can_say": "Our best estimate for Chennai is +0.065 °C per decade, but that can’t yet be told apart from chance. Over the same years the whole planet warmed at +0.211 °C per decade.",
+  "what_data_cannot_tell_us": "That Chennai’s trend is more than chance, or that 1997 was a real turning point (p = 0.17).",
+  "would_change_it": "Sharper, city-scale evidence: MODIS satellite land temperature at 1 km.",
+  "next_witness": "Sharper satellite evidence: MODIS land temperature at 1 km, in the night-heat case.",
+  "sources": [
+    "NASA POWER daily point",
+    "GISTEMP v4 (global land-ocean)"
+  ]
+}

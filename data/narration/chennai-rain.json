@@ -1,0 +1,22 @@
+{
+  "case_id": "chennai-rain",
+  "headline": "The evidence is inconclusive: no clear change in Chennai’s downpours",
+  "summary": "None of the three rain measures clears the bar, even though the data does see the 2015 floods.",
+  "verdict": "Heavy-rain days, the wettest day of each year and total yearly rain show no clear trend over 1981–2025. Total rain edges up (+69 mm per decade, p = 0.062), but not clearly enough to call: it doesn’t pass the multiple-test check.",
+  "strength": "inconclusive",
+  "evidence_notes": {
+    "heavy_days": "No change in heavy-rain days. This data averages rain over a ~50 km grid, which smooths out extreme days: the wettest day of the 2015 floods is only the fifth-wettest day in this record.",
+    "max_day": "The single wettest day of the year may be getting a little heavier, but the change is well within chance.",
+    "total": "Total yearly rain edges up, but not clearly enough to call."
+  },
+  "suspects": [],
+  "devils_advocate": "This data averages rain over a ~50 km grid and blends satellite and model inputs, so a cloudburst over one neighbourhood is diluted into the regional average. Trends in extreme days are the hardest thing for it to see.",
+  "devils_advocate_note": "The detector check shows the data can see a big event lasting weeks; it’s single extreme days that get smoothed out. We keep this objection on the record.",
+  "can_say": "Chennai’s total rainfall has not clearly changed since 1981 in this data, and neither have heavy-rain days.",
+  "what_data_cannot_tell_us": "Whether cloudbursts over parts of the city are becoming more common: a ~50 km grid can’t see them.",
+  "would_change_it": "Rain-gauge records from stations inside the city.",
+  "next_witness": "India Meteorological Department station data for Chennai.",
+  "sources": [
+    "NASA POWER daily point"
+  ]
+}

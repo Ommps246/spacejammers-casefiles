@@ -1,0 +1,18 @@
+{
+  "case_id": "nilgiris-greenery",
+  "headline": "Ooty’s greenness is falling: strong evidence from one satellite pixel",
+  "summary": "The one spot we checked, around Ooty, is getting browner, and the trend holds up to the multiple-test check.",
+  "verdict": "Greenness around Ooty fell by about −0.028 NDVI per decade over 2000–2025 (strong). This is a single 250 m pixel, so it describes that spot, not the whole district.",
+  "strength": "strong",
+  "evidence_notes": {
+    "ndvi_nilgiris_ooty": "The spot around Ooty is getting steadily browner."
+  },
+  "suspects": [],
+  "devils_advocate": "NDVI measures greenness, not tree cover: tea gardens, irrigated crops and weeds all count as green, and clearing one plantation or building on one plot inside a single 250 m pixel can look like a regional trend. Monsoon clouds also hide the hills for months.",
+  "devils_advocate_note": "We keep this objection on the record.",
+  "can_say": "The pixel around Ooty has been getting browner since 2000.",
+  "what_data_cannot_tell_us": "What caused it, or whether the rest of the Nilgiris is browning too.",
+  "would_change_it": "More points across the district, and land-cover data to see what changed at this one.",
+  "next_witness": "Sharper Landsat images of the Ooty pixel.",
+  "sources": ["MODIS MOD13Q1 v6.1 (Terra vegetation index, 16-day, 250 m)"]
+}

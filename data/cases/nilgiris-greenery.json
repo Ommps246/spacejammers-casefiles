@@ -1,0 +1,193 @@
+{
+  "case_id": "nilgiris-greenery",
+  "region": {
+    "id": "nilgiris",
+    "name": "Nilgiris",
+    "lat": 11.41,
+    "lon": 76.7,
+    "blurb": "Western Ghats hill district; forests and tea estates"
+  },
+  "topic": "greenery",
+  "question": "Is Nilgiris losing its green cover?",
+  "primary_evidence": [
+    "ndvi_nilgiris_ooty"
+  ],
+  "evidence": [
+    {
+      "id": "ndvi_nilgiris_ooty",
+      "label": "Greenness: Ooty",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "nilgiris_ooty",
+        "name": "Ooty",
+        "lat": 11.41,
+        "lon": 76.7
+      },
+      "stats": {
+        "trend": "decreasing",
+        "p_value": 0.002997002997002997,
+        "significant": true,
+        "sen_slope_per_step": -0.0028172594748936365,
+        "slope_per_decade": -0.028172594748936367,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.6553846153846153,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=6, 1000 resamples) + Sen's slope",
+        "p_value_naive": 2.971083881364578e-06,
+        "block_length": 6,
+        "trend_uncorrected": "decreasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.023
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0406
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.0236
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.0457
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.0257
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.029
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0268
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.014
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.021
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0037
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0355
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.0021
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.012
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.0099
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.0041
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.0142
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0428
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.031
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0135
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0105
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.0131
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.0128
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.0408
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0219
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.031
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.021
+        }
+      ],
+      "cleaning": {
+        "point": "nilgiris_ooty",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 495,
+        "months": 311,
+        "kept_months": 289,
+        "years": 26,
+        "kept_years": 26
+      }
+    }
+  ],
+  "data_quality": {
+    "points": [
+      {
+        "point": "nilgiris_ooty",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 495,
+        "months": 311,
+        "kept_months": 289,
+        "years": 26,
+        "kept_years": 26
+      }
+    ],
+    "skipped_exhibits": [],
+    "skipped_points": [
+      "pulicat_shore"
+    ]
+  },
+  "datasets": [
+    {
+      "short_name": "MODIS MOD13Q1 v6.1 (Terra vegetation index, 16-day, 250 m)",
+      "provider": "NASA LP DAAC, via AppEEARS",
+      "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061"
+    }
+  ],
+  "caveats": [
+    "Each point is a single MODIS pixel (250 m for greenness, 1 km for land temperature): one new building, cleared plot or flooded field inside it can look like a trend.",
+    "Clouds hide the ground, most of all in the monsoon: months without enough clear views are left out, and a year counts only with at least 8 valid months.",
+    "MODIS starts in 2000 (Aqua in mid-2002), so these trends cover about 25 years, shorter than the 1981 to 2025 weather record."
+  ],
+  "generated": "2026-09-26"
+}

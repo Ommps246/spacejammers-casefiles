@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:power.larc.nasa.gov)",
+      "WebFetch(domain:data.giss.nasa.gov)",
+      "WebFetch(domain:appeears.earthdatacloud.nasa.gov)",
+      "WebFetch(domain:www.earthdata.nasa.gov)",
+      "WebFetch(domain:science.nasa.gov)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:pypi.org)",
+      "WebSearch",
+      "Bash(python3 -m venv *)",
+      "Bash(source .venv/bin/activate*)",
+      "Bash(pip install *)",
+      "Bash(python -m pytest *)",
+      "Bash(python -m pipeline.fetch *)",
+      "Bash(python -m pipeline.build_cases*)",
+      "Bash(python -m pipeline.guard *)",
+      "Bash(curl -sS *power.larc.nasa.gov*)",
+      "Bash(curl -sS *data.giss.nasa.gov*)",
+      "Bash(python -m pipeline.appeears status*)",
+      "Bash(python -m pipeline.appeears download*)"
+    ]
+  },
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "power.larc.nasa.gov",
+        "data.giss.nasa.gov",
+        "appeears.earthdatacloud.nasa.gov",
+        "urs.earthdata.nasa.gov",
+        "pypi.org",
+        "files.pythonhosted.org",
+        "registry.npmjs.org",
+        "unpkg.com"
+      ]
+    }
+  }
+}

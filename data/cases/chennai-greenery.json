@@ -1,0 +1,2040 @@
+{
+  "case_id": "chennai-greenery",
+  "region": {
+    "id": "chennai",
+    "name": "Chennai",
+    "lat": 13.08,
+    "lon": 80.27,
+    "blurb": "Coastal megacity; 2015 floods, 2019 'Day Zero' water crisis"
+  },
+  "topic": "greenery",
+  "question": "Is Chennai losing its green cover?",
+  "primary_evidence": [
+    "ndvi_chennai_core",
+    "ndvi_chennai_omr",
+    "ndvi_chennai_tambaram",
+    "ndvi_chennai_avadi",
+    "ndvi_chengalpattu_edge",
+    "ndvi_rural_kanchipuram_west",
+    "ndvi_rural_uthiramerur_south",
+    "ndvi_rural_uthukottai_north"
+  ],
+  "evidence": [
+    {
+      "id": "ndvi_chennai_core",
+      "label": "Greenness: Chennai core (T. Nagar)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "chennai_core",
+        "name": "Chennai core (T. Nagar)",
+        "lat": 13.04,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.7052947052947053,
+        "significant": false,
+        "sen_slope_per_step": -0.0001935290404040408,
+        "slope_per_decade": -0.001935290404040408,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.05846153846153846,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.6915533638570888,
+        "block_length": 3,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.0239
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0108
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.003
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.0091
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.0091
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.007
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.0031
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.0035
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0255
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0138
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0249
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.0089
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.025
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.006
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.0008
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.0164
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0119
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0257
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.042
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0249
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.0004
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0073
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0041
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0069
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0193
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.0007
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_core",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 473,
+        "months": 311,
+        "kept_months": 282,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "city"
+    },
+    {
+      "id": "ndvi_chennai_omr",
+      "label": "Greenness: OMR IT corridor (Sholinganallur)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "chennai_omr",
+        "name": "OMR IT corridor (Sholinganallur)",
+        "lat": 12.9,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "decreasing",
+        "p_value": 0.017982017982017984,
+        "significant": true,
+        "sen_slope_per_step": -0.004048208239567305,
+        "slope_per_decade": -0.04048208239567305,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.5015384615384615,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=5, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.0003559860458823838,
+        "block_length": 5,
+        "trend_uncorrected": "decreasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.0763
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0908
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.0769
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.0778
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.0313
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.0301
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0605
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.005
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.0329
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0519
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.0135
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.0143
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0132
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.0175
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.0116
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.0059
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0447
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0563
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0419
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0291
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.016
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.0002
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.0314
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0149
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.0332
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.0399
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_omr",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 480,
+        "months": 311,
+        "kept_months": 280,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "city"
+    },
+    {
+      "id": "ndvi_chennai_tambaram",
+      "label": "Greenness: Tambaram (southern suburb)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "chennai_tambaram",
+        "name": "Tambaram (southern suburb)",
+        "lat": 12.92,
+        "lon": 80.12
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.45354645354645357,
+        "significant": false,
+        "sen_slope_per_step": -0.0007550336773773354,
+        "slope_per_decade": -0.007550336773773354,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.13333333333333333,
+        "n": 25,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.3623776993195864,
+        "block_length": 3,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.0348
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0354
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.0115
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.0251
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.0041
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.0211
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0286
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.0161
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0319
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0596
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0073
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.0036
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0089
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.0189
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.0089
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0021
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0736
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0668
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.086
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.0101
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0304
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0065
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.0271
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0029
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.0402
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_tambaram",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 461,
+        "months": 311,
+        "kept_months": 278,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "city"
+    },
+    {
+      "id": "ndvi_chennai_avadi",
+      "label": "Greenness: Avadi (western suburb)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "chennai_avadi",
+        "name": "Avadi (western suburb)",
+        "lat": 13.12,
+        "lon": 80.1
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.011988011988011988,
+        "significant": true,
+        "sen_slope_per_step": 0.0023894632097974473,
+        "slope_per_decade": 0.023894632097974475,
+        "units_per_decade": "NDVI per decade",
+        "tau": 0.42,
+        "n": 25,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.0035073847992901364,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.0051
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.0206
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.0243
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.0253
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.036
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.0257
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.0025
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.0156
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0022
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0391
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0197
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.0095
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0158
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.039
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.0015
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.0208
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.0006
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0388
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0095
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.0427
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0151
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0558
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.038
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0091
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.0323
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_avadi",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 459,
+        "months": 311,
+        "kept_months": 276,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "city"
+    },
+    {
+      "id": "ndvi_chengalpattu_edge",
+      "label": "Greenness: Chengalpattu (urban edge)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "chengalpattu_edge",
+        "name": "Chengalpattu (urban edge)",
+        "lat": 12.7,
+        "lon": 79.95
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.011988011988011988,
+        "significant": true,
+        "sen_slope_per_step": 0.004547976034571489,
+        "slope_per_decade": 0.045479760345714895,
+        "units_per_decade": "NDVI per decade",
+        "tau": 0.5753846153846154,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=5, 1000 resamples) + Sen's slope",
+        "p_value_naive": 4.1363520666415354e-05,
+        "block_length": 5,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.0262
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.0256
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.0474
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.0486
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.0426
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.0676
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.0516
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.088
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.0304
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0422
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0066
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.021
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.0407
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.04
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.002
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.0257
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0064
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.0064
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.0213
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.0447
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.077
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0437
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0167
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.0416
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0303
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.0917
+        }
+      ],
+      "cleaning": {
+        "point": "chengalpattu_edge",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 465,
+        "months": 311,
+        "kept_months": 277,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "urban edge"
+    },
+    {
+      "id": "ndvi_rural_kanchipuram_west",
+      "label": "Greenness: Kanchipuram west farmland (countryside control)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "rural_kanchipuram_west",
+        "name": "Kanchipuram west farmland (countryside control)",
+        "lat": 12.8,
+        "lon": 79.55
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.016983016983016984,
+        "significant": true,
+        "sen_slope_per_step": 0.0027896894144064095,
+        "slope_per_decade": 0.027896894144064096,
+        "units_per_decade": "NDVI per decade",
+        "tau": 0.4338461538461538,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=4, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.0020299364239215745,
+        "block_length": 4,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.0006
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.0237
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.0254
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.0398
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.0302
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.0505
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.0136
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.0166
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.012
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.026
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0226
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.0215
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0038
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.0148
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.0242
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.0182
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0341
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0014
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.0113
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0577
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.0457
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0172
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0504
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.0765
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0518
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.0455
+        }
+      ],
+      "cleaning": {
+        "point": "rural_kanchipuram_west",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 494,
+        "months": 311,
+        "kept_months": 291,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "countryside control"
+    },
+    {
+      "id": "ndvi_rural_uthiramerur_south",
+      "label": "Greenness: Uthiramerur south farmland (countryside control)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "rural_uthiramerur_south",
+        "name": "Uthiramerur south farmland (countryside control)",
+        "lat": 12.55,
+        "lon": 79.7
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.994005994005994,
+        "significant": false,
+        "sen_slope_per_step": 4.0386101398598904e-05,
+        "slope_per_decade": 0.00040386101398598906,
+        "units_per_decade": "NDVI per decade",
+        "tau": 0.003076923076923077,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 1.0,
+        "block_length": 3,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.005
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0334
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.0191
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.018
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.0263
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.0201
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0161
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.0203
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.0105
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0344
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.0002
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.0333
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.0198
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.0183
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.012
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.0351
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.0244
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.0102
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0228
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0181
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.0224
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.0006
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0231
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.0106
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0318
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.0039
+        }
+      ],
+      "cleaning": {
+        "point": "rural_uthiramerur_south",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 511,
+        "months": 311,
+        "kept_months": 291,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "countryside control"
+    },
+    {
+      "id": "ndvi_rural_uthukottai_north",
+      "label": "Greenness: Uthukottai north farmland (countryside control)",
+      "plain": "Is this spot getting greener or browner? (NDVI, a satellite greenness index: about 0 is bare ground or buildings, near 1 is dense green cover)",
+      "point": {
+        "id": "rural_uthukottai_north",
+        "name": "Uthukottai north farmland (countryside control)",
+        "lat": 13.37,
+        "lon": 79.95
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.001998001998001998,
+        "significant": true,
+        "sen_slope_per_step": 0.006819920155051986,
+        "slope_per_decade": 0.06819920155051987,
+        "units_per_decade": "NDVI per decade",
+        "tau": 0.6615384615384615,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=5, 1000 resamples) + Sen's slope",
+        "p_value_naive": 2.3947489109499287e-06,
+        "block_length": 5,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.099
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.061
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.0358
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.0579
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.0938
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.0692
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.0239
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.0356
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0027
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0593
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0267
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.0145
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.016
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.0084
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.0119
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.0237
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.018
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.0129
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0199
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0228
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.0562
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0594
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.09
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.1106
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.0802
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.1401
+        }
+      ],
+      "cleaning": {
+        "point": "rural_uthukottai_north",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 499,
+        "months": 311,
+        "kept_months": 294,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "countryside control"
+    },
+    {
+      "id": "ndvi_gap_chennai_core",
+      "label": "City minus countryside greenness: Chennai core (T. Nagar)",
+      "plain": "Is this spot losing green faster than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024)? A falling gap means the city spot is browning relative to farmland.",
+      "point": {
+        "id": "chennai_core",
+        "name": "Chennai core (T. Nagar)",
+        "lat": 13.04,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "decreasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": -0.0036046833902200655,
+        "slope_per_decade": -0.036046833902200655,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.6738461538461539,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=6, 1000 resamples) + Sen's slope",
+        "p_value_naive": 1.5470660124083935e-06,
+        "block_length": 6,
+        "trend_uncorrected": "decreasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.0554
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0279
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.0111
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.0295
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.041
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.0396
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.004
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.0071
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0321
+        },
+        {
+          "t": "2009-01-01",
+          "v": 0.0261
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0085
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.0142
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.025
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.0023
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.0009
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.0263
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0027
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.033
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0315
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.0079
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.0269
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.0181
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.0504
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0728
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.0353
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.0613
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: farmland greenness rises and falls with crop cycles, irrigation and fallow years, so a city-minus-farmland gap moves with farming as much as with the city."
+      }
+    },
+    {
+      "id": "ndvi_gap_chennai_omr",
+      "label": "City minus countryside greenness: OMR IT corridor (Sholinganallur)",
+      "plain": "Is this spot losing green faster than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024)? A falling gap means the city spot is browning relative to farmland.",
+      "point": {
+        "id": "chennai_omr",
+        "name": "OMR IT corridor (Sholinganallur)",
+        "lat": 12.9,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "decreasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": -0.0077443851081489025,
+        "slope_per_decade": -0.07744385108148902,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.7046153846153846,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=5, 1000 resamples) + Sen's slope",
+        "p_value_naive": 5.021917266478937e-07,
+        "block_length": 5,
+        "trend_uncorrected": "decreasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.1078
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.108
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.091
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.1164
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.0814
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.0767
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0676
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.0057
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.0263
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.012
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.0299
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.0373
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0131
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.0093
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.0117
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.004
+        },
+        {
+          "t": "2016-01-01",
+          "v": -0.0355
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0635
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0314
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.0038
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.0425
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.0256
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.086
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0808
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.0878
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.1005
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: farmland greenness rises and falls with crop cycles, irrigation and fallow years, so a city-minus-farmland gap moves with farming as much as with the city."
+      }
+    },
+    {
+      "id": "ndvi_gap_chennai_tambaram",
+      "label": "City minus countryside greenness: Tambaram (southern suburb)",
+      "plain": "Is this spot losing green faster than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024)? A falling gap means the city spot is browning relative to farmland.",
+      "point": {
+        "id": "chennai_tambaram",
+        "name": "Tambaram (southern suburb)",
+        "lat": 12.92,
+        "lon": 80.12
+      },
+      "stats": {
+        "trend": "decreasing",
+        "p_value": 0.006993006993006993,
+        "significant": true,
+        "sen_slope_per_step": -0.00434848880519007,
+        "slope_per_decade": -0.043484888051900705,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.5666666666666667,
+        "n": 25,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=4, 1000 resamples) + Sen's slope",
+        "p_value_naive": 7.913997769493086e-05,
+        "block_length": 4,
+        "trend_uncorrected": "decreasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.0663
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.0526
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.0255
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.0636
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.046
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.0254
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0357
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.0267
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0385
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.0197
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.0091
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.0267
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0089
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.0271
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.001
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.0072
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0809
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.0564
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.0531
+        },
+        {
+          "t": "2020-01-01",
+          "v": -0.0164
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.0051
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.048
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0388
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.0517
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.0204
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: farmland greenness rises and falls with crop cycles, irrigation and fallow years, so a city-minus-farmland gap moves with farming as much as with the city."
+      }
+    },
+    {
+      "id": "ndvi_gap_chennai_avadi",
+      "label": "City minus countryside greenness: Avadi (western suburb)",
+      "plain": "Is this spot losing green faster than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024)? A falling gap means the city spot is browning relative to farmland.",
+      "point": {
+        "id": "chennai_avadi",
+        "name": "Avadi (western suburb)",
+        "lat": 13.12,
+        "lon": 80.1
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.03196803196803197,
+        "significant": true,
+        "sen_slope_per_step": -0.0012788936750146307,
+        "slope_per_decade": -0.012788936750146307,
+        "units_per_decade": "NDVI per decade",
+        "tau": -0.3,
+        "n": 25,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.03765485026971738,
+        "block_length": 3,
+        "trend_uncorrected": "decreasing",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": 0.0264
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.0035
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.0103
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.0133
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.0141
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.0209
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.0047
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.005
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.0088
+        },
+        {
+          "t": "2009-01-01",
+          "v": 0.0008
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.0033
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.0136
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.0157
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.0472
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.0014
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.0307
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.0098
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.0461
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.0009
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.0162
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.0102
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.0013
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.0279
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.0455
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.0283
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: farmland greenness rises and falls with crop cycles, irrigation and fallow years, so a city-minus-farmland gap moves with farming as much as with the city."
+      }
+    }
+  ],
+  "data_quality": {
+    "points": [
+      {
+        "point": "chennai_core",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 473,
+        "months": 311,
+        "kept_months": 282,
+        "years": 26,
+        "kept_years": 26
+      },
+      {
+        "point": "chennai_omr",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 480,
+        "months": 311,
+        "kept_months": 280,
+        "years": 26,
+        "kept_years": 26
+      },
+      {
+        "point": "chennai_tambaram",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 461,
+        "months": 311,
+        "kept_months": 278,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "chennai_avadi",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 459,
+        "months": 311,
+        "kept_months": 276,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "chengalpattu_edge",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 465,
+        "months": 311,
+        "kept_months": 277,
+        "years": 26,
+        "kept_years": 26
+      },
+      {
+        "point": "rural_kanchipuram_west",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 494,
+        "months": 311,
+        "kept_months": 291,
+        "years": 26,
+        "kept_years": 26
+      },
+      {
+        "point": "rural_uthiramerur_south",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 511,
+        "months": 311,
+        "kept_months": 291,
+        "years": 26,
+        "kept_years": 26
+      },
+      {
+        "point": "rural_uthukottai_north",
+        "layer": "NDVI",
+        "composites": 595,
+        "kept_composites": 499,
+        "months": 311,
+        "kept_months": 294,
+        "years": 26,
+        "kept_years": 26
+      }
+    ],
+    "skipped_exhibits": [],
+    "skipped_points": [
+      "pulicat_shore"
+    ],
+    "reference_rule": [
+      {
+        "point": "chennai_core",
+        "passes": false
+      },
+      {
+        "point": "chennai_omr",
+        "passes": false
+      },
+      {
+        "point": "chennai_tambaram",
+        "passes": true
+      },
+      {
+        "point": "chennai_avadi",
+        "passes": false
+      },
+      {
+        "point": "chengalpattu_edge",
+        "passes": false
+      },
+      {
+        "point": "rural_kanchipuram_west",
+        "passes": true
+      },
+      {
+        "point": "rural_uthiramerur_south",
+        "passes": true
+      },
+      {
+        "point": "rural_uthukottai_north",
+        "passes": true
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "short_name": "MODIS MOD13Q1 v6.1 (Terra vegetation index, 16-day, 250 m)",
+      "provider": "NASA LP DAAC, via AppEEARS",
+      "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061"
+    },
+    {
+      "short_name": "MODIS MCD12Q1 v6.1 (Terra+Aqua land cover type, yearly, 500 m)",
+      "provider": "NASA LP DAAC, via AppEEARS",
+      "url": "https://doi.org/10.5067/MODIS/MCD12Q1.061"
+    }
+  ],
+  "caveats": [
+    "Each point is a single MODIS pixel (250 m for greenness, 1 km for land temperature): one new building, cleared plot or flooded field inside it can look like a trend.",
+    "Clouds hide the ground, most of all in the monsoon: months without enough clear views are left out, and a year counts only with at least 8 valid months.",
+    "MODIS starts in 2000 (Aqua in mid-2002), so these trends cover about 25 years, shorter than the 1981 to 2025 weather record."
+  ],
+  "land_cover": {
+    "id": "land_cover",
+    "label": "Land cover in 2001 vs 2024",
+    "plain": "What the satellite classified the ground at each spot as, at the start and end of the record",
+    "source_note": "MODIS land cover classification (500 m), evidence not proof",
+    "points": [
+      {
+        "point": {
+          "id": "chennai_core",
+          "name": "Chennai core (T. Nagar)",
+          "lat": 13.04,
+          "lon": 80.23
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": false,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "chennai_omr",
+          "name": "OMR IT corridor (Sholinganallur)",
+          "lat": 12.9,
+          "lon": 80.23
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": true,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "chennai_tambaram",
+          "name": "Tambaram (southern suburb)",
+          "lat": 12.92,
+          "lon": 80.12
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      },
+      {
+        "point": {
+          "id": "chennai_avadi",
+          "name": "Avadi (western suburb)",
+          "lat": 13.12,
+          "lon": 80.1
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": false,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "chengalpattu_edge",
+          "name": "Chengalpattu (urban edge)",
+          "lat": 12.7,
+          "lon": 79.95
+        },
+        "role": "urban edge",
+        "class_2001": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": false,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "rural_kanchipuram_west",
+          "name": "Kanchipuram west farmland (countryside control)",
+          "lat": 12.8,
+          "lon": 79.55
+        },
+        "role": "countryside control",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      },
+      {
+        "point": {
+          "id": "rural_uthiramerur_south",
+          "name": "Uthiramerur south farmland (countryside control)",
+          "lat": 12.55,
+          "lon": 79.7
+        },
+        "role": "countryside control",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      },
+      {
+        "point": {
+          "id": "rural_uthukottai_north",
+          "name": "Uthukottai north farmland (countryside control)",
+          "lat": 13.37,
+          "lon": 79.95
+        },
+        "role": "countryside control",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      }
+    ]
+  },
+  "reference": {
+    "points": [
+      "rural_kanchipuram_west",
+      "rural_uthiramerur_south",
+      "rural_uthukottai_north"
+    ],
+    "rule": "A countryside reference must be MODIS land cover class 12 (Cropland) in both 2001 and 2024.",
+    "min_points_per_year": 2,
+    "years": 26,
+    "first_year": 2000,
+    "last_year": 2025
+  },
+  "generated": "2026-09-26"
+}

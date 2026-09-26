@@ -1,0 +1,162 @@
+[
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_chengalpattu_edge"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_chennai_avadi"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_chennai_core"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_chennai_omr"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_chennai_tambaram"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_gap_chennai_avadi"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_gap_chennai_core"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_gap_chennai_omr"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_gap_chennai_tambaram"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_rural_kanchipuram_west"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_rural_uthiramerur_south"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "evidence_id": "ndvi_rural_uthukottai_north"
+  },
+  {
+    "case_id": "chennai-heat",
+    "evidence_id": "hot_days"
+  },
+  {
+    "case_id": "chennai-heat",
+    "evidence_id": "temp_trend"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_chengalpattu_edge"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_chennai_avadi"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_chennai_core"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_chennai_omr"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_chennai_tambaram"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_rural_kanchipuram_west"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_rural_uthiramerur_south"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "night_lst_rural_uthukottai_north"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "uhi_chennai_avadi"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "uhi_chennai_core"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "uhi_chennai_omr"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "evidence_id": "uhi_chennai_tambaram"
+  },
+  {
+    "case_id": "chennai-rain",
+    "evidence_id": "heavy_days"
+  },
+  {
+    "case_id": "chennai-rain",
+    "evidence_id": "max_day"
+  },
+  {
+    "case_id": "chennai-rain",
+    "evidence_id": "total"
+  },
+  {
+    "case_id": "nilgiris-greenery",
+    "evidence_id": "ndvi_nilgiris_ooty"
+  },
+  {
+    "case_id": "nilgiris-heat",
+    "evidence_id": "hot_days"
+  },
+  {
+    "case_id": "nilgiris-heat",
+    "evidence_id": "temp_trend"
+  },
+  {
+    "case_id": "nilgiris-rain",
+    "evidence_id": "heavy_days"
+  },
+  {
+    "case_id": "nilgiris-rain",
+    "evidence_id": "max_day"
+  },
+  {
+    "case_id": "nilgiris-rain",
+    "evidence_id": "total"
+  },
+  {
+    "case_id": "pulicat-heat",
+    "evidence_id": "hot_days"
+  },
+  {
+    "case_id": "pulicat-heat",
+    "evidence_id": "temp_trend"
+  },
+  {
+    "case_id": "pulicat-rain",
+    "evidence_id": "heavy_days"
+  },
+  {
+    "case_id": "pulicat-rain",
+    "evidence_id": "max_day"
+  },
+  {
+    "case_id": "pulicat-rain",
+    "evidence_id": "total"
+  }
+]

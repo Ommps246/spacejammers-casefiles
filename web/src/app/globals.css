@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/*
+ * Case Files design tokens (design/Tokens.dc.html, visual system v1).
+ * Dark space, frosted glass, one gold accent from NASA Terra, and verdict colours that carry meaning.
+ * Utilities follow the names: bg-space-0, text-gold, rounded-card, text-title-1, font-mono, ease-case ...
+ */
+@theme {
+  /* Colour */
+  --color-space-0: #05070d; /* page top */
+  --color-space-1: #0b1020; /* page bottom */
+  --color-navy: #1b2a4a; /* Terra solar-cell blue: tiles, chips */
+  --color-gold: #c9a24a; /* Terra insulation foil: the one accent */
+  --color-gold-soft: #e2c77e; /* links, "Open case" */
+  --color-gold-pale: #e9dcb8; /* text on navy notes */
+  --color-strong: #34c759;
+  --color-moderate: #ffb020;
+  --color-moderate-soft: #ffd27a;
+  --color-inconclusive: #8e8e93;
+  --color-inconclusive-soft: #d1d1d6;
+  --color-objection: #ff453a;
+  --color-objection-soft: #ff8a80;
+  --color-reference: #dfe7f5; /* reference series and numbers */
+  --color-label: #f5f5f7;
+  --color-secondary: rgb(235 235 245 / 0.66);
+  --color-tertiary: rgb(235 235 245 / 0.56);
+  --color-hairline: rgb(255 255 255 / 0.09);
+
+  /* Radius */
+  --radius-flag: 10px;
+  --radius-tile: 14px;
+  --radius-card: 20px;
+
+  /* Type: SF Pro via the system stack, Inter fallback. Nothing is downloaded (offline demo). */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  --text-hero: 96px;
+  --text-hero--line-height: 0.95;
+  --text-hero--letter-spacing: -0.04em;
+  --text-hero--font-weight: 700;
+  --text-title-1: 56px;
+  --text-title-1--line-height: 1.05;
+  --text-title-1--letter-spacing: -0.032em;
+  --text-title-1--font-weight: 700;
+  --text-title-2: 36px;
+  --text-title-2--line-height: 1.15;
+  --text-title-2--letter-spacing: -0.028em;
+  --text-title-2--font-weight: 700;
+  --text-title-3: 26px;
+  --text-title-3--line-height: 1.15;
+  --text-title-3--letter-spacing: -0.02em;
+  --text-title-3--font-weight: 650;
+  --text-body: 17px;
+  --text-body--line-height: 1.6;
+  --text-stat: 40px;
+  --text-stat--line-height: 1;
+  --text-stat--letter-spacing: -0.035em;
+  --text-stat--font-weight: 700;
+  --text-meta: 11px;
+  --text-meta--letter-spacing: 0.08em;
+
+  /* Motion: card enter 420 ms, rise 12 px, 60 ms stagger; objection 520 ms from +48 px after 180 ms */
+  --ease-case: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  color-scheme: dark;
+  background: var(--color-space-1);
+}
+
+/* Page top to page bottom. Not background-attachment: fixed (repaints on every scroll frame). */
+body {
+  background: linear-gradient(180deg, var(--color-space-0) 0%, var(--color-space-1) 100%) no-repeat;
+  color: var(--color-label);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Surfaces (Tokens · Surfaces) */
+@utility glass-card {
+  background: rgb(255 255 255 / 0.045);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+@utility reference-card {
+  background: rgb(27 42 74 / 0.32);
+  border: 1px dashed rgb(223 231 245 / 0.26);
+  border-radius: var(--radius-card);
+}
+@utility objection-card {
+  background: rgb(255 69 58 / 0.05);
+  border: 1px solid rgb(255 69 58 / 0.3);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+@utility lead-card {
+  background: rgb(201 162 74 / 0.04);
+  border: 1px dashed rgb(201 162 74 / 0.4);
+  border-radius: var(--radius-card);
+}
+/* Meta line: mono, 11 px, +0.08em, caps, tabular */
+@utility meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: var(--text-meta--letter-spacing);
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Development-only globe inspection (?inspect): the globe fills the screen, the page is hidden. */
+body[data-globe-inspect] {
+  visibility: hidden;
+}
+body[data-globe-inspect] [data-hero-globe] {
+  visibility: visible;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-space-0);
+}

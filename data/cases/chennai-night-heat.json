@@ -1,0 +1,2212 @@
+{
+  "case_id": "chennai-night-heat",
+  "region": {
+    "id": "chennai",
+    "name": "Chennai",
+    "lat": 13.08,
+    "lon": 80.27,
+    "blurb": "Coastal megacity; 2015 floods, 2019 'Day Zero' water crisis"
+  },
+  "topic": "night-heat",
+  "question": "Are Chennai's nights warming faster than the countryside's?",
+  "primary_evidence": [
+    "night_lst_chennai_core",
+    "night_lst_chennai_omr",
+    "night_lst_chennai_tambaram",
+    "night_lst_chennai_avadi",
+    "night_lst_chengalpattu_edge",
+    "night_lst_rural_kanchipuram_west",
+    "night_lst_rural_uthiramerur_south",
+    "night_lst_rural_uthukottai_north"
+  ],
+  "evidence": [
+    {
+      "id": "night_lst_chennai_core",
+      "label": "Night surface temperature: Chennai core (T. Nagar)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "chennai_core",
+        "name": "Chennai core (T. Nagar)",
+        "lat": 13.04,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": 0.03778448251541466,
+        "slope_per_decade": 0.3778448251541466,
+        "units_per_decade": "°C per decade",
+        "tau": 0.6369230769230769,
+        "n": 26,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 5.610515437348695e-06,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.65
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.407
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.357
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.251
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.369
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.139
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.386
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.236
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.156
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.128
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.16
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.16
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.077
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.052
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.427
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.018
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.749
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.425
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.172
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.107
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.204
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.156
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.139
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.376
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.013
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.78
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_core",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 859,
+        "months": 311,
+        "kept_months": 258,
+        "years": 26,
+        "kept_years": 26
+      },
+      "role": "city"
+    },
+    {
+      "id": "night_lst_chennai_omr",
+      "label": "Night surface temperature: OMR IT corridor (Sholinganallur)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "chennai_omr",
+        "name": "OMR IT corridor (Sholinganallur)",
+        "lat": 12.9,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.003996003996003996,
+        "significant": true,
+        "sen_slope_per_step": 0.06930897514978981,
+        "slope_per_decade": 0.6930897514978982,
+        "units_per_decade": "°C per decade",
+        "tau": 0.6933333333333334,
+        "n": 25,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=6, 1000 resamples) + Sen's slope",
+        "p_value_naive": 1.3349516918559345e-06,
+        "block_length": 6,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.558
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.253
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.421
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.871
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.514
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.867
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.529
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.459
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.458
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.414
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.13
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.084
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.144
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.006
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.382
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.847
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.379
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.291
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.385
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.533
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.464
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.608
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.58
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.281
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.845
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_omr",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 859,
+        "months": 311,
+        "kept_months": 255,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "city"
+    },
+    {
+      "id": "night_lst_chennai_tambaram",
+      "label": "Night surface temperature: Tambaram (southern suburb)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "chennai_tambaram",
+        "name": "Tambaram (southern suburb)",
+        "lat": 12.92,
+        "lon": 80.12
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": 0.046819982049302794,
+        "slope_per_decade": 0.46819982049302794,
+        "units_per_decade": "°C per decade",
+        "tau": 0.7,
+        "n": 25,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=6, 1000 resamples) + Sen's slope",
+        "p_value_naive": 1.054484505047526e-06,
+        "block_length": 6,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.487
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.266
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.452
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.833
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.17
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.302
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.258
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.585
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.171
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.034
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.194
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.044
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.062
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.044
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.27
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.906
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.335
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.182
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.521
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.212
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.343
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.218
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.437
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.26
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.671
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_tambaram",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 854,
+        "months": 311,
+        "kept_months": 246,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "city"
+    },
+    {
+      "id": "night_lst_chennai_avadi",
+      "label": "Night surface temperature: Avadi (western suburb)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "chennai_avadi",
+        "name": "Avadi (western suburb)",
+        "lat": 13.12,
+        "lon": 80.1
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": 0.051987243294068286,
+        "slope_per_decade": 0.5198724329406829,
+        "units_per_decade": "°C per decade",
+        "tau": 0.62,
+        "n": 25,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 1.5555676707190713e-05,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.984
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.407
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.276
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.017
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.622
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.364
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.397
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.241
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.175
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.316
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.037
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.323
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.083
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.204
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.029
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.706
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.474
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.234
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.471
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.49
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.267
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.081
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.461
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.417
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.597
+        }
+      ],
+      "cleaning": {
+        "point": "chennai_avadi",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 848,
+        "months": 311,
+        "kept_months": 251,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "city"
+    },
+    {
+      "id": "night_lst_chengalpattu_edge",
+      "label": "Night surface temperature: Chengalpattu (urban edge)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "chengalpattu_edge",
+        "name": "Chengalpattu (urban edge)",
+        "lat": 12.7,
+        "lon": 79.95
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": 0.07970824879872948,
+        "slope_per_decade": 0.7970824879872949,
+        "units_per_decade": "°C per decade",
+        "tau": 0.6533333333333333,
+        "n": 25,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 5.258060130852726e-06,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -2.271
+        },
+        {
+          "t": "2001-01-01",
+          "v": -0.3
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.553
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.571
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.9
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.084
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.5
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.397
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.219
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.215
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.364
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.259
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.507
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.633
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.405
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.745
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.441
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.258
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.446
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.581
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.402
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.794
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.75
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.448
+        },
+        {
+          "t": "2025-01-01",
+          "v": 1.242
+        }
+      ],
+      "cleaning": {
+        "point": "chengalpattu_edge",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 845,
+        "months": 311,
+        "kept_months": 251,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "urban edge"
+    },
+    {
+      "id": "night_lst_rural_kanchipuram_west",
+      "label": "Night surface temperature: Kanchipuram west farmland (countryside control)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "rural_kanchipuram_west",
+        "name": "Kanchipuram west farmland (countryside control)",
+        "lat": 12.8,
+        "lon": 79.55
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.01098901098901099,
+        "significant": true,
+        "sen_slope_per_step": 0.03600776445449612,
+        "slope_per_decade": 0.36007764454496116,
+        "units_per_decade": "°C per decade",
+        "tau": 0.42,
+        "n": 25,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.0035073847992901364,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": 0.085
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.181
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.08
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.499
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.057
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.361
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.141
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.354
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.022
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.18
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.314
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.089
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.505
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.655
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.072
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.274
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.355
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.785
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.443
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.046
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.135
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.567
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.343
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.531
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.969
+        }
+      ],
+      "cleaning": {
+        "point": "rural_kanchipuram_west",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 824,
+        "months": 311,
+        "kept_months": 242,
+        "years": 26,
+        "kept_years": 25
+      },
+      "role": "countryside control"
+    },
+    {
+      "id": "night_lst_rural_uthiramerur_south",
+      "label": "Night surface temperature: Uthiramerur south farmland (countryside control)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "rural_uthiramerur_south",
+        "name": "Uthiramerur south farmland (countryside control)",
+        "lat": 12.55,
+        "lon": 79.7
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.01098901098901099,
+        "significant": true,
+        "sen_slope_per_step": 0.057494015508177385,
+        "slope_per_decade": 0.5749401550817739,
+        "units_per_decade": "°C per decade",
+        "tau": 0.463768115942029,
+        "n": 24,
+        "start": "2000-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.0016318152580183654,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2000-01-01",
+          "v": -0.884
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.244
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.037
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.664
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.522
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.098
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.181
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.109
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.288
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.218
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.277
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.316
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.854
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.105
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.03
+        },
+        {
+          "t": "2017-01-01",
+          "v": -0.064
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.768
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.213
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.093
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.479
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.75
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.585
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.524
+        },
+        {
+          "t": "2025-01-01",
+          "v": 1.274
+        }
+      ],
+      "cleaning": {
+        "point": "rural_uthiramerur_south",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 814,
+        "months": 311,
+        "kept_months": 242,
+        "years": 26,
+        "kept_years": 24
+      },
+      "role": "countryside control"
+    },
+    {
+      "id": "night_lst_rural_uthukottai_north",
+      "label": "Night surface temperature: Uthukottai north farmland (countryside control)",
+      "plain": "Is the ground here staying warmer at night? (Terra's land-surface temperature, measured around 10:30 pm)",
+      "point": {
+        "id": "rural_uthukottai_north",
+        "name": "Uthukottai north farmland (countryside control)",
+        "lat": 13.37,
+        "lon": 79.95
+      },
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.02097902097902098,
+        "significant": true,
+        "sen_slope_per_step": 0.027275018237664442,
+        "slope_per_decade": 0.2727501823766444,
+        "units_per_decade": "°C per decade",
+        "tau": 0.36231884057971014,
+        "n": 24,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.014063556708352909,
+        "block_length": 3,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": true,
+        "verdict_strength": "moderate"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.058
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.293
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.091
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.305
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.106
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.364
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.251
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.062
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.086
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.141
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.562
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.136
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.148
+        },
+        {
+          "t": "2014-01-01",
+          "v": -0.399
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.012
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.552
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.539
+        },
+        {
+          "t": "2018-01-01",
+          "v": -0.281
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.505
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.06
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.205
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.516
+        },
+        {
+          "t": "2023-01-01",
+          "v": -0.025
+        },
+        {
+          "t": "2025-01-01",
+          "v": 0.663
+        }
+      ],
+      "cleaning": {
+        "point": "rural_uthukottai_north",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 854,
+        "months": 311,
+        "kept_months": 247,
+        "years": 26,
+        "kept_years": 24
+      },
+      "role": "countryside control"
+    },
+    {
+      "id": "uhi_chennai_core",
+      "label": "City minus countryside: Chennai core (T. Nagar)",
+      "plain": "How much warmer this spot stays at night than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024). A widening gap means the city's heat island is growing.",
+      "point": {
+        "id": "chennai_core",
+        "name": "Chennai core (T. Nagar)",
+        "lat": 13.04,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.9110889110889111,
+        "significant": false,
+        "sen_slope_per_step": 0.0012556497240431386,
+        "slope_per_decade": 0.012556497240431386,
+        "units_per_decade": "°C per decade",
+        "tau": 0.02,
+        "n": 25,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.9070384808036946,
+        "block_length": 3,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.497
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.187
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.033
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.073
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.052
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.085
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.04
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.019
+        },
+        {
+          "t": "2009-01-01",
+          "v": 0.004
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.0
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.204
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.091
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.374
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.208
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.045
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.464
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.148
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.44
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.28
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.138
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.118
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.472
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.075
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.514
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.188
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: every farmland control is classed Cropland in both 2001 and 2024, but a 500 m land-cover class can't see smaller changes inside the pixel (a new building, a switch to irrigation), and the controls are about 40 to 75 km inland, where nights can differ from the coast for other reasons."
+      }
+    },
+    {
+      "id": "uhi_chennai_omr",
+      "label": "City minus countryside: OMR IT corridor (Sholinganallur)",
+      "plain": "How much warmer this spot stays at night than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024). A widening gap means the city's heat island is growing.",
+      "point": {
+        "id": "chennai_omr",
+        "name": "OMR IT corridor (Sholinganallur)",
+        "lat": 12.9,
+        "lon": 80.23
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.14685314685314685,
+        "significant": false,
+        "sen_slope_per_step": 0.025243500130787966,
+        "slope_per_decade": 0.25243500130787966,
+        "units_per_decade": "°C per decade",
+        "tau": 0.36666666666666664,
+        "n": 25,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=5, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.010906151033361455,
+        "block_length": 5,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.648
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.083
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.203
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.429
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.427
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.565
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.333
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.284
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.326
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.253
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.235
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.251
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.178
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.642
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.319
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.562
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.103
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.32
+        },
+        {
+          "t": "2019-01-01",
+          "v": -0.001
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.467
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.191
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.003
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.279
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.246
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.124
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: every farmland control is classed Cropland in both 2001 and 2024, but a 500 m land-cover class can't see smaller changes inside the pixel (a new building, a switch to irrigation), and the controls are about 40 to 75 km inland, where nights can differ from the coast for other reasons."
+      }
+    },
+    {
+      "id": "uhi_chennai_tambaram",
+      "label": "City minus countryside: Tambaram (southern suburb)",
+      "plain": "How much warmer this spot stays at night than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024). A widening gap means the city's heat island is growing.",
+      "point": {
+        "id": "chennai_tambaram",
+        "name": "Tambaram (southern suburb)",
+        "lat": 12.92,
+        "lon": 80.12
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.23976023976023977,
+        "significant": false,
+        "sen_slope_per_step": 0.01217030223891329,
+        "slope_per_decade": 0.12170302238913289,
+        "units_per_decade": "°C per decade",
+        "tau": 0.22,
+        "n": 25,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.1289960116674873,
+        "block_length": 3,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.577
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.096
+        },
+        {
+          "t": "2003-01-01",
+          "v": -0.234
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.391
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.083
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.0
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.062
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.409
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.039
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.195
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.171
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.123
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.385
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.68
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.207
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.62
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.058
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.429
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.134
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.145
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.07
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.393
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.136
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.268
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.297
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: every farmland control is classed Cropland in both 2001 and 2024, but a 500 m land-cover class can't see smaller changes inside the pixel (a new building, a switch to irrigation), and the controls are about 40 to 75 km inland, where nights can differ from the coast for other reasons."
+      }
+    },
+    {
+      "id": "uhi_chennai_avadi",
+      "label": "City minus countryside: Avadi (western suburb)",
+      "plain": "How much warmer this spot stays at night than the farmland reference (the average of three spots classed as cropland in both 2001 and 2024). A widening gap means the city's heat island is growing.",
+      "point": {
+        "id": "chennai_avadi",
+        "name": "Avadi (western suburb)",
+        "lat": 13.12,
+        "lon": 80.1
+      },
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.28471528471528473,
+        "significant": false,
+        "sen_slope_per_step": 0.011727608417033776,
+        "slope_per_decade": 0.11727608417033776,
+        "units_per_decade": "°C per decade",
+        "tau": 0.15942028985507245,
+        "n": 24,
+        "start": "2001-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=3, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.28615732110495795,
+        "block_length": 3,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "2001-01-01",
+          "v": -0.497
+        },
+        {
+          "t": "2002-01-01",
+          "v": -0.105
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.2
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.18
+        },
+        {
+          "t": "2005-01-01",
+          "v": -0.277
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.095
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.045
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.0
+        },
+        {
+          "t": "2009-01-01",
+          "v": -0.184
+        },
+        {
+          "t": "2010-01-01",
+          "v": -0.123
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.042
+        },
+        {
+          "t": "2012-01-01",
+          "v": -0.25
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.431
+        },
+        {
+          "t": "2015-01-01",
+          "v": -0.034
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.421
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.197
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.378
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.084
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.423
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.006
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.692
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.16
+        },
+        {
+          "t": "2024-01-01",
+          "v": -0.11
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.371
+        }
+      ],
+      "lead": {
+        "reason": "Lead, not a finding: every farmland control is classed Cropland in both 2001 and 2024, but a 500 m land-cover class can't see smaller changes inside the pixel (a new building, a switch to irrigation), and the controls are about 40 to 75 km inland, where nights can differ from the coast for other reasons."
+      }
+    }
+  ],
+  "reference": {
+    "points": [
+      "rural_kanchipuram_west",
+      "rural_uthiramerur_south",
+      "rural_uthukottai_north"
+    ],
+    "rule": "A countryside reference must be MODIS land cover class 12 (Cropland) in both 2001 and 2024.",
+    "min_points_per_year": 2,
+    "years": 25,
+    "first_year": 2001,
+    "last_year": 2025
+  },
+  "land_cover": {
+    "id": "land_cover",
+    "label": "Land cover in 2001 vs 2024",
+    "plain": "What the satellite classified the ground at each spot as, at the start and end of the record",
+    "source_note": "MODIS land cover classification (500 m), evidence not proof",
+    "points": [
+      {
+        "point": {
+          "id": "chennai_core",
+          "name": "Chennai core (T. Nagar)",
+          "lat": 13.04,
+          "lon": 80.23
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": false,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "chennai_omr",
+          "name": "OMR IT corridor (Sholinganallur)",
+          "lat": 12.9,
+          "lon": 80.23
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": true,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "chennai_tambaram",
+          "name": "Tambaram (southern suburb)",
+          "lat": 12.92,
+          "lon": 80.12
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      },
+      {
+        "point": {
+          "id": "chennai_avadi",
+          "name": "Avadi (western suburb)",
+          "lat": 13.12,
+          "lon": 80.1
+        },
+        "role": "city",
+        "class_2001": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": false,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "chengalpattu_edge",
+          "name": "Chengalpattu (urban edge)",
+          "lat": 12.7,
+          "lon": 79.95
+        },
+        "role": "urban edge",
+        "class_2001": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "class_2024": {
+          "code": 13,
+          "name": "Urban/built-up"
+        },
+        "changed": false,
+        "passes_reference_rule": false
+      },
+      {
+        "point": {
+          "id": "rural_kanchipuram_west",
+          "name": "Kanchipuram west farmland (countryside control)",
+          "lat": 12.8,
+          "lon": 79.55
+        },
+        "role": "countryside control",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      },
+      {
+        "point": {
+          "id": "rural_uthiramerur_south",
+          "name": "Uthiramerur south farmland (countryside control)",
+          "lat": 12.55,
+          "lon": 79.7
+        },
+        "role": "countryside control",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      },
+      {
+        "point": {
+          "id": "rural_uthukottai_north",
+          "name": "Uthukottai north farmland (countryside control)",
+          "lat": 13.37,
+          "lon": 79.95
+        },
+        "role": "countryside control",
+        "class_2001": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "class_2024": {
+          "code": 12,
+          "name": "Cropland"
+        },
+        "changed": false,
+        "passes_reference_rule": true
+      }
+    ]
+  },
+  "sanity_checks": [
+    {
+      "name": "Do Terra and Aqua agree? (night land temperature, same points)",
+      "result": [
+        {
+          "point": "chennai_core",
+          "months_compared": 212,
+          "monthly_correlation": 0.39182780337079287,
+          "years_compared": 21,
+          "first_year": 2003,
+          "last_year": 2024,
+          "terra_slope_per_decade": 0.363978512476571,
+          "aqua_slope_per_decade": 0.3553281562969815,
+          "same_direction": true,
+          "slopes_differ": false
+        },
+        {
+          "point": "chennai_omr",
+          "months_compared": 197,
+          "monthly_correlation": 0.5338682509046128,
+          "years_compared": 21,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.801034722222219,
+          "aqua_slope_per_decade": 0.8134678045953412,
+          "same_direction": true,
+          "slopes_differ": false
+        },
+        {
+          "point": "chennai_tambaram",
+          "months_compared": 197,
+          "monthly_correlation": 0.5910595522974029,
+          "years_compared": 19,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.727475700424719,
+          "aqua_slope_per_decade": 0.6389024352840162,
+          "same_direction": true,
+          "slopes_differ": false
+        },
+        {
+          "point": "chennai_avadi",
+          "months_compared": 208,
+          "monthly_correlation": 0.462104481383439,
+          "years_compared": 20,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.6128897555517263,
+          "aqua_slope_per_decade": 0.3561828531124949,
+          "same_direction": true,
+          "slopes_differ": true
+        },
+        {
+          "point": "chengalpattu_edge",
+          "months_compared": 196,
+          "monthly_correlation": 0.6289910175364862,
+          "years_compared": 19,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.847527230504086,
+          "aqua_slope_per_decade": 0.7767361111111122,
+          "same_direction": true,
+          "slopes_differ": false
+        },
+        {
+          "point": "rural_kanchipuram_west",
+          "months_compared": 198,
+          "monthly_correlation": 0.7003939789816431,
+          "years_compared": 19,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.41525584418680617,
+          "aqua_slope_per_decade": 0.27389128590072637,
+          "same_direction": true,
+          "slopes_differ": true
+        },
+        {
+          "point": "rural_uthiramerur_south",
+          "months_compared": 195,
+          "monthly_correlation": 0.7158012207134712,
+          "years_compared": 19,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.6659553074198585,
+          "aqua_slope_per_decade": 0.5485134772120654,
+          "same_direction": true,
+          "slopes_differ": false
+        },
+        {
+          "point": "rural_uthukottai_north",
+          "months_compared": 204,
+          "monthly_correlation": 0.6037134824926236,
+          "years_compared": 19,
+          "first_year": 2003,
+          "last_year": 2025,
+          "terra_slope_per_decade": 0.3050723888072928,
+          "aqua_slope_per_decade": 0.16338091563786072,
+          "same_direction": true,
+          "slopes_differ": true
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "point": "chennai_avadi",
+      "issue": "terra_aqua_slope_mismatch",
+      "terra_slope_per_decade": 0.6128897555517263,
+      "aqua_slope_per_decade": 0.3561828531124949,
+      "note": "Terra and Aqua disagree on how fast Avadi (western suburb) is warming at night (+0.61 vs +0.36 °C per decade, 2003–2025); treat the size of this trend with caution."
+    },
+    {
+      "point": "rural_kanchipuram_west",
+      "issue": "terra_aqua_slope_mismatch",
+      "terra_slope_per_decade": 0.41525584418680617,
+      "aqua_slope_per_decade": 0.27389128590072637,
+      "note": "Terra and Aqua disagree on how fast Kanchipuram west farmland (countryside control) is warming at night (+0.42 vs +0.27 °C per decade, 2003–2025); treat the size of this trend with caution."
+    },
+    {
+      "point": "rural_uthukottai_north",
+      "issue": "terra_aqua_slope_mismatch",
+      "terra_slope_per_decade": 0.3050723888072928,
+      "aqua_slope_per_decade": 0.16338091563786072,
+      "note": "Terra and Aqua disagree on how fast Uthukottai north farmland (countryside control) is warming at night (+0.31 vs +0.16 °C per decade, 2003–2025); treat the size of this trend with caution."
+    }
+  ],
+  "data_quality": {
+    "points": [
+      {
+        "point": "chennai_core",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 859,
+        "months": 311,
+        "kept_months": 258,
+        "years": 26,
+        "kept_years": 26
+      },
+      {
+        "point": "chennai_core",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 760,
+        "months": 282,
+        "kept_months": 229,
+        "years": 24,
+        "kept_years": 23
+      },
+      {
+        "point": "chennai_omr",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 859,
+        "months": 311,
+        "kept_months": 255,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "chennai_omr",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 740,
+        "months": 282,
+        "kept_months": 214,
+        "years": 24,
+        "kept_years": 23
+      },
+      {
+        "point": "chennai_tambaram",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 854,
+        "months": 311,
+        "kept_months": 246,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "chennai_tambaram",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 750,
+        "months": 282,
+        "kept_months": 215,
+        "years": 24,
+        "kept_years": 23
+      },
+      {
+        "point": "chennai_avadi",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 848,
+        "months": 311,
+        "kept_months": 251,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "chennai_avadi",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 779,
+        "months": 282,
+        "kept_months": 226,
+        "years": 24,
+        "kept_years": 23
+      },
+      {
+        "point": "chengalpattu_edge",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 845,
+        "months": 311,
+        "kept_months": 251,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "chengalpattu_edge",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 740,
+        "months": 282,
+        "kept_months": 210,
+        "years": 24,
+        "kept_years": 22
+      },
+      {
+        "point": "rural_kanchipuram_west",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 824,
+        "months": 311,
+        "kept_months": 242,
+        "years": 26,
+        "kept_years": 25
+      },
+      {
+        "point": "rural_kanchipuram_west",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 753,
+        "months": 282,
+        "kept_months": 222,
+        "years": 24,
+        "kept_years": 22
+      },
+      {
+        "point": "rural_uthiramerur_south",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 814,
+        "months": 311,
+        "kept_months": 242,
+        "years": 26,
+        "kept_years": 24
+      },
+      {
+        "point": "rural_uthiramerur_south",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 746,
+        "months": 282,
+        "kept_months": 215,
+        "years": 24,
+        "kept_years": 23
+      },
+      {
+        "point": "rural_uthukottai_north",
+        "layer": "Terra night LST",
+        "composites": 1186,
+        "kept_composites": 854,
+        "months": 311,
+        "kept_months": 247,
+        "years": 26,
+        "kept_years": 24
+      },
+      {
+        "point": "rural_uthukottai_north",
+        "layer": "Aqua night LST",
+        "composites": 1080,
+        "kept_composites": 775,
+        "months": 282,
+        "kept_months": 217,
+        "years": 24,
+        "kept_years": 22
+      }
+    ],
+    "skipped_exhibits": [],
+    "skipped_points": [
+      "pulicat_shore"
+    ],
+    "reference_rule": [
+      {
+        "point": "chennai_core",
+        "passes": false
+      },
+      {
+        "point": "chennai_omr",
+        "passes": false
+      },
+      {
+        "point": "chennai_tambaram",
+        "passes": true
+      },
+      {
+        "point": "chennai_avadi",
+        "passes": false
+      },
+      {
+        "point": "chengalpattu_edge",
+        "passes": false
+      },
+      {
+        "point": "rural_kanchipuram_west",
+        "passes": true
+      },
+      {
+        "point": "rural_uthiramerur_south",
+        "passes": true
+      },
+      {
+        "point": "rural_uthukottai_north",
+        "passes": true
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "short_name": "MODIS MOD11A2 v6.1 (Terra land surface temperature, 8-day, 1 km)",
+      "provider": "NASA LP DAAC, via AppEEARS",
+      "url": "https://doi.org/10.5067/MODIS/MOD11A2.061"
+    },
+    {
+      "short_name": "MODIS MYD11A2 v6.1 (Aqua land surface temperature, 8-day, 1 km)",
+      "provider": "NASA LP DAAC, via AppEEARS",
+      "url": "https://doi.org/10.5067/MODIS/MYD11A2.061"
+    },
+    {
+      "short_name": "MODIS MCD12Q1 v6.1 (Terra+Aqua land cover type, yearly, 500 m)",
+      "provider": "NASA LP DAAC, via AppEEARS",
+      "url": "https://doi.org/10.5067/MODIS/MCD12Q1.061"
+    }
+  ],
+  "caveats": [
+    "Each point is a single MODIS pixel (250 m for greenness, 1 km for land temperature): one new building, cleared plot or flooded field inside it can look like a trend.",
+    "Clouds hide the ground, most of all in the monsoon: months without enough clear views are left out, and a year counts only with at least 8 valid months.",
+    "MODIS starts in 2000 (Aqua in mid-2002), so these trends cover about 25 years, shorter than the 1981 to 2025 weather record.",
+    "Land surface temperature is how hot the ground is, not the air temperature a weather station measures. Terra has drifted to an earlier overpass time since about 2020 as it nears the end of its mission; the Aqua cross-check guards against reading that drift as a trend."
+  ],
+  "generated": "2026-09-26"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "predev": "node scripts/copy-data.mjs",
+    "prebuild": "node scripts/copy-data.mjs",
+    "models": "mkdir -p node_modules/.cache && node scripts/fix-terra-materials.mjs public/models/terra.glb node_modules/.cache/terra.fixed.glb && npx --yes @gltf-transform/cli@4.5.0 optimize node_modules/.cache/terra.fixed.glb public/models/terra.opt.glb --compress meshopt --texture-compress webp --texture-size 1024 --palette false && npx --yes @gltf-transform/cli@4.5.0 optimize public/models/aqua.glb public/models/aqua.opt.glb --compress meshopt --texture-compress webp --texture-size 1024 --palette false",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@observablehq/plot": "^0.6.17",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "framer-motion": "^13.4.0",
+    "maath": "^0.10.8",
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.13.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.186.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^5.0.1"
+  }
+}

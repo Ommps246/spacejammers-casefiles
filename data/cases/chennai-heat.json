@@ -1,0 +1,710 @@
+{
+  "case_id": "chennai-heat",
+  "region": {
+    "id": "chennai",
+    "name": "Chennai",
+    "lat": 13.08,
+    "lon": 80.27,
+    "blurb": "Coastal megacity; 2015 floods, 2019 'Day Zero' water crisis"
+  },
+  "topic": "heat",
+  "question": "Is Chennai heating up, and since when?",
+  "evidence": [
+    {
+      "id": "temp_trend",
+      "label": "Average temperature",
+      "plain": "Is the region getting warmer overall?",
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.04095904095904096,
+        "significant": true,
+        "sen_slope_per_step": 0.0005420094051504672,
+        "slope_per_decade": 0.06504112861805607,
+        "units_per_decade": "°C per decade",
+        "tau": 0.08714354428640143,
+        "n": 540,
+        "start": "1981-01-01",
+        "end": "2025-12-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=9, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.0024658843730496205,
+        "block_length": 9,
+        "trend_uncorrected": "increasing",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "1981-01-01",
+          "v": -0.427
+        },
+        {
+          "t": "1982-01-01",
+          "v": -0.254
+        },
+        {
+          "t": "1983-01-01",
+          "v": 0.237
+        },
+        {
+          "t": "1984-01-01",
+          "v": -0.344
+        },
+        {
+          "t": "1985-01-01",
+          "v": -0.42
+        },
+        {
+          "t": "1986-01-01",
+          "v": 0.061
+        },
+        {
+          "t": "1987-01-01",
+          "v": 0.271
+        },
+        {
+          "t": "1988-01-01",
+          "v": 0.058
+        },
+        {
+          "t": "1989-01-01",
+          "v": -0.048
+        },
+        {
+          "t": "1990-01-01",
+          "v": 0.085
+        },
+        {
+          "t": "1991-01-01",
+          "v": 0.259
+        },
+        {
+          "t": "1992-01-01",
+          "v": 0.065
+        },
+        {
+          "t": "1993-01-01",
+          "v": -0.112
+        },
+        {
+          "t": "1994-01-01",
+          "v": -0.039
+        },
+        {
+          "t": "1995-01-01",
+          "v": -0.551
+        },
+        {
+          "t": "1996-01-01",
+          "v": -0.305
+        },
+        {
+          "t": "1997-01-01",
+          "v": 0.282
+        },
+        {
+          "t": "1998-01-01",
+          "v": 0.497
+        },
+        {
+          "t": "1999-01-01",
+          "v": -0.12
+        },
+        {
+          "t": "2000-01-01",
+          "v": -0.007
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.332
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.301
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.402
+        },
+        {
+          "t": "2004-01-01",
+          "v": -0.337
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.079
+        },
+        {
+          "t": "2006-01-01",
+          "v": -0.009
+        },
+        {
+          "t": "2007-01-01",
+          "v": -0.195
+        },
+        {
+          "t": "2008-01-01",
+          "v": -0.168
+        },
+        {
+          "t": "2009-01-01",
+          "v": 0.399
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.009
+        },
+        {
+          "t": "2011-01-01",
+          "v": -0.101
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.149
+        },
+        {
+          "t": "2013-01-01",
+          "v": -0.038
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.152
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.044
+        },
+        {
+          "t": "2016-01-01",
+          "v": 0.286
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.31
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.252
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.536
+        },
+        {
+          "t": "2020-01-01",
+          "v": 0.073
+        },
+        {
+          "t": "2021-01-01",
+          "v": -0.21
+        },
+        {
+          "t": "2022-01-01",
+          "v": -0.178
+        },
+        {
+          "t": "2023-01-01",
+          "v": 0.169
+        },
+        {
+          "t": "2024-01-01",
+          "v": 0.538
+        },
+        {
+          "t": "2025-01-01",
+          "v": -0.052
+        }
+      ]
+    },
+    {
+      "id": "hot_days",
+      "label": "Very hot days per year",
+      "plain": "Days hotter than 38.0°C (the hottest 5% of days in 1981–2010)",
+      "threshold": 38.04,
+      "stats": {
+        "trend": "no clear trend",
+        "p_value": 0.06293706293706294,
+        "significant": false,
+        "sen_slope_per_step": -0.15384615384615385,
+        "slope_per_decade": -1.5384615384615385,
+        "units_per_decade": "days/yr per decade",
+        "tau": -0.18383838383838383,
+        "n": 45,
+        "start": "1981-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=4, 1000 resamples) + Sen's slope",
+        "p_value_naive": 0.07592248900411924,
+        "block_length": 4,
+        "trend_uncorrected": "no trend",
+        "survives_fdr": false,
+        "verdict_strength": "inconclusive"
+      },
+      "series": [
+        {
+          "t": "1981-01-01",
+          "v": 17.0
+        },
+        {
+          "t": "1982-01-01",
+          "v": 9.0
+        },
+        {
+          "t": "1983-01-01",
+          "v": 27.0
+        },
+        {
+          "t": "1984-01-01",
+          "v": 9.0
+        },
+        {
+          "t": "1985-01-01",
+          "v": 20.0
+        },
+        {
+          "t": "1986-01-01",
+          "v": 21.0
+        },
+        {
+          "t": "1987-01-01",
+          "v": 21.0
+        },
+        {
+          "t": "1988-01-01",
+          "v": 20.0
+        },
+        {
+          "t": "1989-01-01",
+          "v": 26.0
+        },
+        {
+          "t": "1990-01-01",
+          "v": 11.0
+        },
+        {
+          "t": "1991-01-01",
+          "v": 15.0
+        },
+        {
+          "t": "1992-01-01",
+          "v": 27.0
+        },
+        {
+          "t": "1993-01-01",
+          "v": 27.0
+        },
+        {
+          "t": "1994-01-01",
+          "v": 22.0
+        },
+        {
+          "t": "1995-01-01",
+          "v": 3.0
+        },
+        {
+          "t": "1996-01-01",
+          "v": 30.0
+        },
+        {
+          "t": "1997-01-01",
+          "v": 18.0
+        },
+        {
+          "t": "1998-01-01",
+          "v": 26.0
+        },
+        {
+          "t": "1999-01-01",
+          "v": 13.0
+        },
+        {
+          "t": "2000-01-01",
+          "v": 19.0
+        },
+        {
+          "t": "2001-01-01",
+          "v": 19.0
+        },
+        {
+          "t": "2002-01-01",
+          "v": 27.0
+        },
+        {
+          "t": "2003-01-01",
+          "v": 35.0
+        },
+        {
+          "t": "2004-01-01",
+          "v": 7.0
+        },
+        {
+          "t": "2005-01-01",
+          "v": 4.0
+        },
+        {
+          "t": "2006-01-01",
+          "v": 14.0
+        },
+        {
+          "t": "2007-01-01",
+          "v": 13.0
+        },
+        {
+          "t": "2008-01-01",
+          "v": 20.0
+        },
+        {
+          "t": "2009-01-01",
+          "v": 21.0
+        },
+        {
+          "t": "2010-01-01",
+          "v": 11.0
+        },
+        {
+          "t": "2011-01-01",
+          "v": 13.0
+        },
+        {
+          "t": "2012-01-01",
+          "v": 21.0
+        },
+        {
+          "t": "2013-01-01",
+          "v": 15.0
+        },
+        {
+          "t": "2014-01-01",
+          "v": 17.0
+        },
+        {
+          "t": "2015-01-01",
+          "v": 4.0
+        },
+        {
+          "t": "2016-01-01",
+          "v": 19.0
+        },
+        {
+          "t": "2017-01-01",
+          "v": 25.0
+        },
+        {
+          "t": "2018-01-01",
+          "v": 6.0
+        },
+        {
+          "t": "2019-01-01",
+          "v": 19.0
+        },
+        {
+          "t": "2020-01-01",
+          "v": 4.0
+        },
+        {
+          "t": "2021-01-01",
+          "v": 6.0
+        },
+        {
+          "t": "2022-01-01",
+          "v": 4.0
+        },
+        {
+          "t": "2023-01-01",
+          "v": 18.0
+        },
+        {
+          "t": "2024-01-01",
+          "v": 32.0
+        },
+        {
+          "t": "2025-01-01",
+          "v": 3.0
+        }
+      ]
+    },
+    {
+      "id": "temp_shift",
+      "label": "When did it change?",
+      "plain": "Single abrupt shift in yearly mean temperature",
+      "stats": {
+        "method": "Pettitt test",
+        "new_regime_starts": 1997,
+        "plain": "The shift shows up from 1997 onward (+0.21 °C vs. the years before).",
+        "change_after": "1996-01-01",
+        "p_value": 0.16841680888153862,
+        "mean_before": 27.733194887341867,
+        "mean_after": 27.941702734305423,
+        "shift": 0.20850784696355618
+      },
+      "exploratory_changepoints": []
+    },
+    {
+      "id": "global_context",
+      "label": "Compared with the whole planet",
+      "plain": "Global warming rate over the same years (NASA GISS)",
+      "stats": {
+        "trend": "increasing",
+        "p_value": 0.000999000999000999,
+        "significant": true,
+        "sen_slope_per_step": 0.021126984126984126,
+        "slope_per_decade": 0.21126984126984127,
+        "units_per_decade": "°C per decade",
+        "tau": 0.8090909090909091,
+        "n": 45,
+        "start": "1981-01-01",
+        "end": "2025-01-01",
+        "method": "Mann-Kendall, moving-block bootstrap p-value (block=11, 1000 resamples) + Sen's slope",
+        "p_value_naive": 4.884981308350689e-15,
+        "block_length": 11,
+        "role": "context (not part of the FDR family)",
+        "trend_uncorrected": "increasing",
+        "survives_fdr": null,
+        "verdict_strength": "strong"
+      },
+      "series": [
+        {
+          "t": "1981-01-01",
+          "v": 0.32
+        },
+        {
+          "t": "1982-01-01",
+          "v": 0.14
+        },
+        {
+          "t": "1983-01-01",
+          "v": 0.31
+        },
+        {
+          "t": "1984-01-01",
+          "v": 0.16
+        },
+        {
+          "t": "1985-01-01",
+          "v": 0.12
+        },
+        {
+          "t": "1986-01-01",
+          "v": 0.18
+        },
+        {
+          "t": "1987-01-01",
+          "v": 0.32
+        },
+        {
+          "t": "1988-01-01",
+          "v": 0.39
+        },
+        {
+          "t": "1989-01-01",
+          "v": 0.27
+        },
+        {
+          "t": "1990-01-01",
+          "v": 0.45
+        },
+        {
+          "t": "1991-01-01",
+          "v": 0.41
+        },
+        {
+          "t": "1992-01-01",
+          "v": 0.22
+        },
+        {
+          "t": "1993-01-01",
+          "v": 0.23
+        },
+        {
+          "t": "1994-01-01",
+          "v": 0.32
+        },
+        {
+          "t": "1995-01-01",
+          "v": 0.45
+        },
+        {
+          "t": "1996-01-01",
+          "v": 0.33
+        },
+        {
+          "t": "1997-01-01",
+          "v": 0.47
+        },
+        {
+          "t": "1998-01-01",
+          "v": 0.61
+        },
+        {
+          "t": "1999-01-01",
+          "v": 0.38
+        },
+        {
+          "t": "2000-01-01",
+          "v": 0.39
+        },
+        {
+          "t": "2001-01-01",
+          "v": 0.53
+        },
+        {
+          "t": "2002-01-01",
+          "v": 0.63
+        },
+        {
+          "t": "2003-01-01",
+          "v": 0.62
+        },
+        {
+          "t": "2004-01-01",
+          "v": 0.53
+        },
+        {
+          "t": "2005-01-01",
+          "v": 0.68
+        },
+        {
+          "t": "2006-01-01",
+          "v": 0.64
+        },
+        {
+          "t": "2007-01-01",
+          "v": 0.66
+        },
+        {
+          "t": "2008-01-01",
+          "v": 0.54
+        },
+        {
+          "t": "2009-01-01",
+          "v": 0.66
+        },
+        {
+          "t": "2010-01-01",
+          "v": 0.72
+        },
+        {
+          "t": "2011-01-01",
+          "v": 0.61
+        },
+        {
+          "t": "2012-01-01",
+          "v": 0.65
+        },
+        {
+          "t": "2013-01-01",
+          "v": 0.68
+        },
+        {
+          "t": "2014-01-01",
+          "v": 0.75
+        },
+        {
+          "t": "2015-01-01",
+          "v": 0.9
+        },
+        {
+          "t": "2016-01-01",
+          "v": 1.01
+        },
+        {
+          "t": "2017-01-01",
+          "v": 0.92
+        },
+        {
+          "t": "2018-01-01",
+          "v": 0.85
+        },
+        {
+          "t": "2019-01-01",
+          "v": 0.98
+        },
+        {
+          "t": "2020-01-01",
+          "v": 1.01
+        },
+        {
+          "t": "2021-01-01",
+          "v": 0.85
+        },
+        {
+          "t": "2022-01-01",
+          "v": 0.89
+        },
+        {
+          "t": "2023-01-01",
+          "v": 1.17
+        },
+        {
+          "t": "2024-01-01",
+          "v": 1.29
+        },
+        {
+          "t": "2025-01-01",
+          "v": 1.19
+        }
+      ]
+    }
+  ],
+  "cross_examination": [
+    {
+      "suspect": "Rainfall variability",
+      "question": "Do drier months explain the warm anomalies?",
+      "method": "Lagged Pearson correlation of anomalies",
+      "best": {
+        "lag": 0,
+        "r": -0.20690758857082628,
+        "p_value": 1.2375393819527874e-06,
+        "n": 540
+      },
+      "all_lags": [
+        {
+          "lag": 0,
+          "r": -0.20690758857082628,
+          "p_value": 1.2375393819527874e-06,
+          "n": 540
+        },
+        {
+          "lag": 1,
+          "r": -0.19857094715107,
+          "p_value": 3.388667137864804e-06,
+          "n": 539
+        },
+        {
+          "lag": 2,
+          "r": -0.13832044362918744,
+          "p_value": 0.0012984152641725651,
+          "n": 538
+        },
+        {
+          "lag": 3,
+          "r": -0.05822086571203359,
+          "p_value": 0.17792667352949387,
+          "n": 537
+        }
+      ],
+      "caveat": "Correlation, not causation. p-values not adjusted for autocorrelation."
+    }
+  ],
+  "datasets": [
+    {
+      "short_name": "NASA POWER daily point",
+      "provider": "NASA Langley Research Center, POWER Project",
+      "url": "https://power.larc.nasa.gov/",
+      "sources": [
+        "MERRA2",
+        "POWER"
+      ],
+      "accessed": "2026-09-26"
+    },
+    {
+      "short_name": "GISTEMP v4 (global land-ocean)",
+      "provider": "NASA Goddard Institute for Space Studies",
+      "url": "https://data.giss.nasa.gov/gistemp/",
+      "reference": "Lenssen et al. (2019), JGR Atmospheres, doi:10.1029/2018JD029522"
+    }
+  ],
+  "caveats": [
+    "NASA POWER values are model/satellite blends (MERRA-2 reanalysis based) on a ~50 km grid, so they describe the wider city region, not individual neighbourhoods.",
+    "Reanalysis can shift when input observing systems change; abrupt changepoints should be cross-checked against an independent dataset before being called real."
+  ],
+  "generated": "2026-09-26"
+}

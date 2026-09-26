@@ -1,0 +1,30 @@
+{
+  "case_id": "nilgiris-heat",
+  "headline": "Nilgiris is warming, but more slowly than the planet as a whole",
+  "summary": "Moderate evidence for warming; very hot days show no clear trend.",
+  "verdict": "The yearly average rose about +0.12 °C per decade over 1981–2025 (moderate), slower than the whole planet’s +0.211. Very hot days show no clear trend, and the 2012 step is a lead to follow, not a finding.",
+  "strength": "moderate",
+  "evidence_notes": {
+    "temp_trend": "The region’s yearly average has crept up, and it holds up to the multiple-test check.",
+    "hot_days": "Very hot days may be slightly fewer, but it isn’t a clear trend.",
+    "temp_shift": "A step up from 2012 onward (+0.42 °C vs. the years before): a lead, not a finding.",
+    "global_context": "For comparison: Earth as a whole warmed faster over the same years."
+  },
+  "suspects": [
+    {
+      "suspect": "Rainfall variability",
+      "description": "Do drier months explain warm months? We line up rain and temperature month by month. A match would show they move together, not that one causes the other.",
+      "finding": "Partly ruled in: drier months line up with warmer ones (r = −0.38 in the same month), so some of the swings follow the rain."
+    }
+  ],
+  "devils_advocate": "This data averages a ~50 km area of hills, valleys and plantations, and blends satellite and model inputs, so it can’t tell Ooty town from the forest around it. The 2012 step could reflect a change in the model’s inputs rather than the climate.",
+  "devils_advocate_note": "We keep this objection on the record. It is why the step stays a lead.",
+  "can_say": "The Nilgiris region’s average temperature is rising, +0.12 °C per decade, slower than the whole planet (+0.211).",
+  "what_data_cannot_tell_us": "Whether the 2012 step is real, or what is happening in individual towns.",
+  "would_change_it": "Station records from Ooty and Coonoor, to check the ~50 km average.",
+  "next_witness": "MODIS satellite land temperature at 1 km over the hills.",
+  "sources": [
+    "NASA POWER daily point",
+    "GISTEMP v4 (global land-ocean)"
+  ]
+}

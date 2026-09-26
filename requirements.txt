@@ -1,0 +1,7 @@
+pandas>=2.0,<4
+numpy>=1.24
+scipy>=1.10
+requests>=2.31
+pymannkendall>=1.4.3
+ruptures>=1.1.9
+pytest>=7.4

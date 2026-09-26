@@ -1,0 +1,56 @@
+[
+  {
+    "case_id": "chennai-heat",
+    "question": "Is Chennai heating up, and since when?",
+    "region": "Chennai",
+    "topic": "heat"
+  },
+  {
+    "case_id": "chennai-rain",
+    "question": "Are extreme downpours becoming more common in Chennai?",
+    "region": "Chennai",
+    "topic": "rain"
+  },
+  {
+    "case_id": "nilgiris-heat",
+    "question": "Is Nilgiris heating up, and since when?",
+    "region": "Nilgiris",
+    "topic": "heat"
+  },
+  {
+    "case_id": "nilgiris-rain",
+    "question": "Are extreme downpours becoming more common in Nilgiris?",
+    "region": "Nilgiris",
+    "topic": "rain"
+  },
+  {
+    "case_id": "pulicat-heat",
+    "question": "Is Pulicat Lake heating up, and since when?",
+    "region": "Pulicat Lake",
+    "topic": "heat"
+  },
+  {
+    "case_id": "pulicat-rain",
+    "question": "Are extreme downpours becoming more common in Pulicat Lake?",
+    "region": "Pulicat Lake",
+    "topic": "rain"
+  },
+  {
+    "case_id": "chennai-greenery",
+    "question": "Is Chennai losing its green cover?",
+    "region": "Chennai",
+    "topic": "greenery"
+  },
+  {
+    "case_id": "chennai-night-heat",
+    "question": "Are Chennai's nights warming faster than the countryside's?",
+    "region": "Chennai",
+    "topic": "night-heat"
+  },
+  {
+    "case_id": "nilgiris-greenery",
+    "question": "Is Nilgiris losing its green cover?",
+    "region": "Nilgiris",
+    "topic": "greenery"
+  }
+]

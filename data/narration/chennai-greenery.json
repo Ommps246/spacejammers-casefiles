@@ -1,0 +1,32 @@
+{
+  "case_id": "chennai-greenery",
+  "headline": "Chennai’s greenness is mixed: OMR is browning, most farmland is greening",
+  "summary": "Only one city spot, the OMR IT corridor, is clearly getting browner. Avadi and the urban edge are getting greener, and so is most of the farmland.",
+  "verdict": "Of the four city points, only OMR shows clear browning (−0.04 NDVI per decade, moderate); Avadi greened (+0.024), and the Chennai core and Tambaram show no clear trend. Two of the three farmland controls greened. Measured against that farmland, three city points are falling behind, but those gaps are leads, not findings.",
+  "strength": "moderate",
+  "evidence_notes": {
+    "ndvi_chennai_core": "The city centre’s greenness has barely changed.",
+    "ndvi_chennai_omr": "The IT corridor is getting browner: the one city spot with a clear loss of green.",
+    "ndvi_chennai_tambaram": "Tambaram shows no clear change in greenness.",
+    "ndvi_chennai_avadi": "The western suburb is getting a little greener.",
+    "ndvi_chengalpattu_edge": "The urban edge is getting greener. It is classed as built-up in both years, so it is never used as a control.",
+    "ndvi_rural_kanchipuram_west": "This farmland control is getting greener.",
+    "ndvi_rural_uthiramerur_south": "This farmland control shows no change in greenness at all.",
+    "ndvi_rural_uthukottai_north": "The strongest greening of any spot we checked.",
+    "ndvi_gap_chennai_core": "Against greening farmland, the city centre is falling behind.",
+    "ndvi_gap_chennai_omr": "The IT corridor is falling behind the farmland fastest of the four city points.",
+    "ndvi_gap_chennai_tambaram": "Tambaram is falling behind the farmland too.",
+    "ndvi_gap_chennai_avadi": "Avadi keeps pace with the farmland: no clear gap."
+  },
+  "suspects": [],
+  "devils_advocate": "NDVI measures greenness, not tree cover. Irrigated crops, lawns and monsoon weeds all count as green, so a watered field or a weedy empty plot can look like a growing forest. Each point is one 250 m pixel, and monsoon clouds hide the ground for months, so cloudy years rest on fewer clear views.",
+  "devils_advocate_note": "Farmland greening can be irrigation or extra crops, not trees, so city spots falling behind greening farmland is a lead, not a finding. We keep this objection on the record.",
+  "can_say": "The OMR IT corridor is getting browner, and it is the one city spot the satellite reclassified from cropland to built-up.",
+  "what_data_cannot_tell_us": "Whether Chennai as a whole is losing tree cover: greenness can’t tell trees from crops or weeds.",
+  "would_change_it": "Tree-cover data at finer resolution, or field checks at the pixels that changed.",
+  "next_witness": "Sharper Landsat images, to see what replaced the green at OMR.",
+  "sources": [
+    "MODIS MOD13Q1 v6.1 (Terra vegetation index, 16-day, 250 m)",
+    "MODIS MCD12Q1 v6.1 (Terra+Aqua land cover type, yearly, 500 m)"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "nilgiris-rain",
+  "headline": "The evidence is inconclusive: no clear change in Nilgiris downpours",
+  "summary": "None of the three rain measures shows a clear trend over 1981–2025.",
+  "verdict": "Heavy-rain days, the wettest day of each year and total yearly rain show no clear trend. Total rain edges up (+45 mm per decade) but could be chance (p = 0.15).",
+  "strength": "inconclusive",
+  "evidence_notes": {
+    "heavy_days": "No change in heavy-rain days. This data averages rain over a ~50 km grid, which smooths out extreme days, especially in hills where rain changes from one slope to the next.",
+    "max_day": "The wettest day of each year shows no clear change.",
+    "total": "Total yearly rain edges up, but not clearly enough to call."
+  },
+  "suspects": [],
+  "devils_advocate": "A ~50 km grid spans both the wet western slopes and the drier eastern side of the hills, and blends satellite and model inputs, so local extremes are averaged away.",
+  "devils_advocate_note": "We keep this objection on the record.",
+  "can_say": "Rain in the Nilgiris region shows no clear long-term change in this data.",
+  "what_data_cannot_tell_us": "Whether the downpours that trigger landslides on particular slopes are becoming more common.",
+  "would_change_it": "Rain-gauge records from stations across the hills.",
+  "next_witness": "India Meteorological Department station data for the Nilgiris.",
+  "sources": ["NASA POWER daily point"]
+}

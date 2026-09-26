@@ -1,0 +1,33 @@
+{
+  "case_id": "chennai-night-heat",
+  "headline": "Chennai’s nights are warming, in the city and the countryside alike",
+  "summary": "Night warming is region-wide: city and farmland both, and Terra and Aqua agree on the direction at every point.",
+  "verdict": "The ground stays warmer at night at all four Chennai points, from +0.38 to +0.69 °C per decade over 2000–2025, and all four are strong. All three farmland controls warmed too, from +0.27 to +0.57 °C per decade, so the gap between city and countryside shows no clear trend. That gap is a lead, not a finding.",
+  "strength": "strong",
+  "evidence_notes": {
+    "night_lst_chennai_core": "The heart of the city is holding more heat at night than it used to.",
+    "night_lst_chennai_omr": "The IT corridor shows the fastest night warming of the four city points.",
+    "night_lst_chennai_tambaram": "The southern suburb is warming at night too, clearly and steadily.",
+    "night_lst_chennai_avadi": "The western suburb is warming at night, though the two satellites disagree on how fast.",
+    "night_lst_chengalpattu_edge": "We picked this spot as farmland, but the satellite classes it as built-up in both 2001 and 2024, so it is shown as an urban edge, never as a control.",
+    "night_lst_rural_kanchipuram_west": "Farmland far from the city is warming at night as well.",
+    "night_lst_rural_uthiramerur_south": "This farmland control warmed at night about as fast as the city points.",
+    "night_lst_rural_uthukottai_north": "The mildest warming of the three farmland controls, but still clear enough to pass the multiple-test check.",
+    "uhi_chennai_core": "The city centre’s lead over the farmland has barely moved.",
+    "uhi_chennai_omr": "The IT corridor’s lead over the farmland may be growing, but not clearly enough to call.",
+    "uhi_chennai_tambaram": "Tambaram’s lead over the farmland shows no clear change.",
+    "uhi_chennai_avadi": "Avadi’s lead over the farmland shows no clear change."
+  },
+  "suspects": [],
+  "devils_advocate": "Land surface temperature ≠ air temperature. These satellites measure how hot the ground is, not the air a weather station or a person feels. Each point is one 1 km pixel, and at three points Terra and Aqua agree on the direction but not the size, including two of the farmland controls.",
+  "devils_advocate_note": "Terra’s overpass has also drifted earlier since about 2020; the Aqua cross-check is there to catch that. We keep this objection on the record.",
+  "can_say": "The ground stays warmer at night across the Chennai region, city and farmland alike, and both satellites see it rising.",
+  "what_data_cannot_tell_us": "Whether the city is warming faster than the countryside: the city-minus-farmland gaps show no clear trend yet.",
+  "would_change_it": "More farmland controls, or a longer record, to tell a growing heat island apart from warming across the whole region.",
+  "next_witness": "Air temperature from weather stations, to check the ground-heat trend against what people actually feel.",
+  "sources": [
+    "MODIS MOD11A2 v6.1 (Terra land surface temperature, 8-day, 1 km)",
+    "MODIS MYD11A2 v6.1 (Aqua land surface temperature, 8-day, 1 km)",
+    "MODIS MCD12Q1 v6.1 (Terra+Aqua land cover type, yearly, 500 m)"
+  ]
+}

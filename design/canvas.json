@@ -1,0 +1,208 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-09-21T16:16:03Z"
+ },
+ "title": "Case Files",
+ "launch": {
+  "view": "canvas",
+  "page": "case"
+ },
+ "pages": [
+  {
+   "id": "system",
+   "name": "Visual system"
+  },
+  {
+   "id": "case",
+   "name": "1 · Case page"
+  },
+  {
+   "id": "landing",
+   "name": "2 · Landing"
+  },
+  {
+   "id": "story",
+   "name": "3 · Storyboard"
+  },
+  {
+   "id": "logo",
+   "name": "4 · Logo"
+  }
+ ],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1800,
+   "title": "Design tokens",
+   "page": "system"
+  },
+  "Components.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 1900,
+   "title": "Component sheet",
+   "page": "system"
+  },
+  "Case-Desktop.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 4360,
+   "title": "Case page · desktop 1440",
+   "page": "case",
+   "is_interactive": true
+  },
+  "Case-Mobile.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 390,
+   "h": 5700,
+   "title": "Case page · mobile 390",
+   "page": "case"
+  },
+  "Evidence-Variants.dc.html": {
+   "x": 1990,
+   "y": 0,
+   "w": 1440,
+   "h": 1720,
+   "title": "Evidence card · variants A / B",
+   "page": "case"
+  },
+  "Landing-Desktop.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2100,
+   "title": "Landing · desktop 1440 · settled",
+   "page": "landing"
+  },
+  "Landing-Intro.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "Landing · mid-intro frame (≈1.2 s)",
+   "page": "landing"
+  },
+  "Landing-Mobile.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 390,
+   "h": 2700,
+   "title": "Landing · mobile 390",
+   "page": "landing"
+  },
+  "Storyboard.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 2120,
+   "title": "Video storyboard · 30 s",
+   "page": "story"
+  },
+  "Logo.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1760,
+   "title": "Logo · directions + refined",
+   "page": "logo"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "Components.dc.html",
+  "Case-Desktop.dc.html",
+  "Case-Mobile.dc.html",
+  "Evidence-Variants.dc.html",
+  "Landing-Desktop.dc.html",
+  "Landing-Intro.dc.html",
+  "Landing-Mobile.dc.html",
+  "Storyboard.dc.html",
+  "Logo.dc.html"
+ ],
+ "notes": {
+  "n_sys": {
+   "x": 0,
+   "y": -300,
+   "text": "Visual system",
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "system"
+  },
+  "n_case": {
+   "x": 0,
+   "y": -300,
+   "text": "1 · Case page: Is Chennai heating up?",
+   "kind": "title1",
+   "maxW": 3430,
+   "page": "case"
+  },
+  "m_case1": {
+   "x": -440,
+   "y": 0,
+   "w": 360,
+   "maxH": 520,
+   "color": "orange",
+   "page": "case",
+   "text": "Motion: cards stagger in on scroll\n\nEach section enters when 20% visible. Evidence cards rise 12 px + fade, 420 ms, ease cubic-bezier(0.22,1,0.36,1), 60 ms apart. Stat numbers count up once (tabular figures, 600 ms). Charts draw the Sen’s slope line left to right after the card lands (500 ms)."
+  },
+  "m_case2": {
+   "x": -440,
+   "y": 2150,
+   "w": 360,
+   "maxH": 480,
+   "color": "red",
+   "page": "case",
+   "text": "Motion: Devil’s Advocate objects\n\nAfter the suspects card settles, a 180 ms beat, then the objection card slides in from the right: +48 px → +24 px resting offset, 520 ms, same ease. It stays offset so it reads as an interruption, not another exhibit. Reduced motion: fade only."
+  },
+  "m_case3": {
+   "x": -440,
+   "y": 3760,
+   "w": 360,
+   "maxH": 300,
+   "color": "blue",
+   "page": "case",
+   "text": "“How we know” is live: press Play and toggle it. Mobile shows the collapsed state."
+  },
+  "n_land": {
+   "x": 0,
+   "y": -300,
+   "text": "2 · Landing page",
+   "kind": "title1",
+   "maxW": 3430,
+   "page": "landing"
+  },
+  "m_land": {
+   "x": 1520,
+   "y": 980,
+   "w": 440,
+   "maxH": 360,
+   "color": "orange",
+   "page": "landing",
+   "text": "Intro timeline (2.4 s)\n\n0.0 s globe fades up. 0.2–2.0 s Terra crosses north → south along its ground track; a faint gold scan line and swath sweep the ground beneath it. 1.0 s pins drop on Chennai and Nilgiris. 1.2 s title fades in (this frame). 1.8 s subtitle and buttons. Then the settled state."
+  },
+  "n_story": {
+   "x": 0,
+   "y": -300,
+   "text": "3 · Video storyboard",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "story"
+  },
+  "n_logo": {
+   "x": 0,
+   "y": -300,
+   "text": "4 · Logo",
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "logo"
+  }
+ },
+ "designSystems": []
+}

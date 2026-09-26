@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/*.json
+data/raw/*.csv
+.env
+node_modules/
+.next/
+.DS_Store
+data/raw/appeears/
+data/raw/appeears_extra/
