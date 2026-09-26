@@ -1,5 +1,6 @@
 "use client";
 
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useRef } from "react";
 import { ACESFilmicToneMapping, NeutralToneMapping, type Mesh, type ToneMapping } from "three";
@@ -10,9 +11,9 @@ import { useTabVisible } from "@/lib/use-tab-visible";
 import { Atmosphere } from "./Atmosphere";
 import { readDevView } from "./dev-view";
 import { Earth } from "./Earth";
-import { GroundTrack, trackPoint } from "./GroundTrack";
+import { GroundTrack } from "./GroundTrack";
 import { Pin } from "./Pin";
-import { CASE_PLACES, TEST_PLACES } from "./places";
+import { CASE_PLACES, TEST_PLACES, type Place } from "./places";
 import { SatelliteMarker } from "./SatelliteMarker";
 import { SceneEnvironment } from "./SceneEnvironment";
 
@@ -33,7 +34,12 @@ const ENVIRONMENT_INTENSITY = 0.25;
 // The 3D model (Satellite.tsx) is for a close-up only; it isn't loaded here.
 const TERRA_LAT = 22;
 const TERRA_MARKER_RADIUS = 1.006; // just above the dotted track, so the marker sits on it
-const TERRA_POSITION = trackPoint(TERRA_LAT, TERRA_MARKER_RADIUS);
+
+// Explore mode (OrbitControls): the Earth's radius is 1 and the hero camera sits at 3.52.
+const ZOOM = { min: 1.6, max: 5 }; // never inside the Earth, never out to a dot
+const DAMPING = 0.08;
+const ROTATE_SPEED = 0.5;
+const AUTO_ROTATE_SPEED = 0.35; // slow: about three minutes per turn
 
 const CASE_PIN = "#c9a24a";
 const TEST_PIN = "#ff4fd8";
@@ -48,9 +54,29 @@ function ReadySignal({ onReady }: { onReady?: () => void }) {
   return null;
 }
 
-type Props = { onReady?: () => void };
+type Props = {
+  onReady?: () => void;
+  /** Mount OrbitControls (on touch devices only after "Tap to explore", so page scroll is never captured). */
+  controls?: boolean;
+  /** Wheel/pinch zoom: on once the visitor has engaged with the globe. */
+  zoom?: boolean;
+  /** Slow spin until the first interaction; always off under prefers-reduced-motion. */
+  autoRotate?: boolean;
+  /** Terra moves along its track; off under prefers-reduced-motion. */
+  motion?: boolean;
+  onInteract?: () => void;
+  onOpenPlace?: (place: Place) => void;
+};
 
-export function GlobeScene({ onReady }: Props) {
+export function GlobeScene({
+  onReady,
+  controls = false,
+  zoom = false,
+  autoRotate = false,
+  motion = false,
+  onInteract,
+  onOpenPlace,
+}: Props) {
   const isVisible = useTabVisible();
   const dev = useMemo(() => readDevView(window.location.search), []);
   const earthRef = useRef<Mesh>(null);
@@ -86,11 +112,26 @@ export function GlobeScene({ onReady }: Props) {
         <Atmosphere />
         <GroundTrack />
         {pins.map(({ place, color }) => (
-          <Pin key={place.id} place={place} color={color} occluders={[earthRef]} />
+          <Pin key={place.id} place={place} color={color} occluders={[earthRef]} onOpen={onOpenPlace} />
         ))}
-        <SatelliteMarker position={TERRA_POSITION} />
+        <SatelliteMarker lat={TERRA_LAT} radius={TERRA_MARKER_RADIUS} orbiting={motion} />
         <ReadySignal onReady={onReady} />
       </Suspense>
+      {controls && (
+        <OrbitControls
+          makeDefault
+          enablePan={false}
+          enableZoom={zoom}
+          enableDamping
+          dampingFactor={DAMPING}
+          rotateSpeed={ROTATE_SPEED}
+          minDistance={ZOOM.min}
+          maxDistance={ZOOM.max}
+          autoRotate={autoRotate}
+          autoRotateSpeed={AUTO_ROTATE_SPEED}
+          onStart={onInteract}
+        />
+      )}
     </Canvas>
   );
 }

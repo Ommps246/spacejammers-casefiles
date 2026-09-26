@@ -9,6 +9,7 @@ type NavLink = { href: string; label: string };
 const LINKS: readonly NavLink[] = [
   { href: "/#cases", label: "Cases" },
   { href: "/methods", label: "Method" },
+  { href: "/satellites", label: "Satellites" },
   { href: "/#team", label: "Team" },
 ];
 

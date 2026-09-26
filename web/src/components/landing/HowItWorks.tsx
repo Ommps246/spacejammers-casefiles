@@ -38,6 +38,9 @@ export function HowItWorks() {
       <Link href="/methods" className="self-start text-[14px] font-semibold text-gold-soft hover:text-gold-pale">
         Method: every statistical choice, explained →
       </Link>
+      <Link href="/satellites" className="self-start text-[14px] font-semibold text-gold-soft hover:text-gold-pale">
+        Meet the witnesses: NASA’s Terra and Aqua, in 3D →
+      </Link>
     </section>
   );
 }
