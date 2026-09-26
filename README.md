@@ -78,4 +78,4 @@ npm run build    # fully static: works offline, no API keys
 
 ## Team
 
-Om Mishra · Anik Paul · Adarsh Rathore
+Om Mishra · Anik Paul · Adarsh Rathore · Ashutosh Dash

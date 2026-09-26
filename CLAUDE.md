@@ -3,7 +3,7 @@
 Context for Claude Code. Read this before every task in this repo.
 
 ## What we're building
-NASA Space Apps 2026, challenge **"Be An Earth System Trend Detective!"**, team SpaceJammers (Om Mishra, Anik Paul, Adarsh Rathore), Chennai local event.
+NASA Space Apps 2026, challenge **"Be An Earth System Trend Detective!"**, team SpaceJammers (Om Mishra, Anik Paul, Adarsh Rathore, Ashutosh Dash), Chennai local event.
 
 **Case Files** is an AI detective for Earth's trends. Each case is a solved investigation:
 1. **Claim**: one plain-English sentence ("Is Chennai heating up, and since when?")
