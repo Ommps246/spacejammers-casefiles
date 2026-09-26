@@ -26,7 +26,8 @@ const TONE_MAPPING: keyof typeof TONE_MAPPINGS = "neutral"; // holds the navy be
 // Hero framing (Landing mockup): the disc fills 357/380 of the square box, centred just south-west
 // of Chennai. tan(asin(1/d)) = 0.94 · tan(fov/2)  =>  d ≈ 3.52 for a 35° field of view.
 const CAMERA_FOV = 35;
-export const HERO_CAMERA = latLonToVector3(9, 76, 3.52);
+const HERO_DISTANCE = 3.52;
+export const HERO_CAMERA = latLonToVector3(9, 76, HERO_DISTANCE);
 const SUN_DIRECTION = latLonToVector3(8, 55, 10); // sub-solar point west of India: India in daylight
 const ENVIRONMENT_INTENSITY = 0.25;
 
@@ -36,7 +37,9 @@ const TERRA_LAT = 22;
 const TERRA_MARKER_RADIUS = 1.006; // just above the dotted track, so the marker sits on it
 
 // Explore mode (OrbitControls): the Earth's radius is 1 and the hero camera sits at 3.52.
-const ZOOM = { min: 1.6, max: 5 }; // never inside the Earth, never out to a dot
+// Zoom limits: never inside the Earth; zoomed fully out, the disc keeps ~83% of its hero size
+// (tan(asin(1/d)) at 1.2× the hero distance), so it still fills the hero instead of shrinking to a ball.
+const ZOOM = { min: 1.6, max: HERO_DISTANCE * 1.2 };
 const DAMPING = 0.08;
 const ROTATE_SPEED = 0.5;
 const AUTO_ROTATE_SPEED = 0.35; // slow: about three minutes per turn

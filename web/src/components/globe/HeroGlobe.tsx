@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Component, useEffect, useState, type ReactNode } from "react";
 
 import type { Place } from "./places";
 
@@ -69,6 +69,25 @@ function readEnv(): Env {
   };
 }
 
+// The poster fades out once the live scene has drawn its first frame, then unmounts, so it can never show
+// through the transparent canvas (zoomed out, it looked like a second, bigger Earth behind the model).
+const POSTER_FADE_MS = 300;
+const REDUCED_FADE_MS = 200;
+
+/** If the 3D scene throws (a failed chunk or model load), drop it and keep the poster as the globe. */
+class SceneBoundary extends Component<{ onError: () => void; children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  componentDidCatch() {
+    this.props.onError();
+  }
+  render() {
+    return this.state.failed ? null : this.props.children;
+  }
+}
+
 const PILL =
   "absolute bottom-6 left-1/2 z-20 min-h-11 -translate-x-1/2 rounded-full border px-4 text-[14px] font-semibold";
 
@@ -85,6 +104,8 @@ export function HeroGlobe({ className, sizes, priority = false }: Props) {
   // wheel-zoom only after the first press on the globe, so scrolling past it never zooms by accident.
   const [exploring, setExploring] = useState(false);
   const [engaged, setEngaged] = useState(false);
+  const [posterGone, setPosterGone] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     if (!isPosterDone) return;
@@ -95,7 +116,22 @@ export function HeroGlobe({ className, sizes, priority = false }: Props) {
     });
   }, [isPosterDone]);
 
-  const controls = env !== null && (!env.touch || exploring);
+  // Scene ready: the poster fades out (derived below), then unmounts once the fade is over.
+  const posterFading = isReady && !failed;
+  const showPoster = failed || !posterGone;
+  useEffect(() => {
+    if (!posterFading) return;
+    const id = setTimeout(() => setPosterGone(true), env?.reducedMotion ? REDUCED_FADE_MS : POSTER_FADE_MS);
+    return () => clearTimeout(id);
+  }, [posterFading, env?.reducedMotion]);
+
+  const sceneFailed = () => {
+    setFailed(true);
+    setIsReady(false);
+    setPosterGone(false);
+  };
+
+  const controls = env !== null && !failed && (!env.touch || exploring);
   const openPlace = (place: Place) => {
     if (place.caseId) router.push(`/case/${place.caseId}`);
   };
@@ -105,17 +141,21 @@ export function HeroGlobe({ className, sizes, priority = false }: Props) {
 
   return (
     <div data-hero-globe className={className}>
-      <Image
-        src={POSTER}
-        alt=""
-        fill
-        sizes={sizes}
-        priority={priority}
-        className="object-contain"
-        onLoad={markPosterDone}
-        onError={markPosterDone}
-      />
-      {shouldLoad && env && (
+      {showPoster && (
+        <Image
+          src={POSTER}
+          alt=""
+          fill
+          sizes={sizes}
+          priority={priority}
+          className={`object-contain transition-opacity duration-300 ease-case motion-reduce:duration-200 ${
+            posterFading ? "opacity-0" : "opacity-100"
+          }`}
+          onLoad={markPosterDone}
+          onError={markPosterDone}
+        />
+      )}
+      {shouldLoad && env && !failed && (
         <div
           className={`absolute inset-0 transition-opacity duration-300 ease-case motion-reduce:duration-200 ${
             isReady ? "opacity-100" : "opacity-0"
@@ -124,15 +164,17 @@ export function HeroGlobe({ className, sizes, priority = false }: Props) {
           style={{ pointerEvents: controls ? "auto" : "none" }}
           onPointerDown={() => setEngaged(true)}
         >
-          <GlobeScene
-            onReady={() => setIsReady(true)}
-            controls={controls}
-            zoom={engaged || exploring}
-            autoRotate={!env.reducedMotion && !engaged}
-            motion={!env.reducedMotion}
-            onInteract={() => setEngaged(true)}
-            onOpenPlace={openPlace}
-          />
+          <SceneBoundary onError={sceneFailed}>
+            <GlobeScene
+              onReady={() => setIsReady(true)}
+              controls={controls}
+              zoom={engaged || exploring}
+              autoRotate={!env.reducedMotion && !engaged}
+              motion={!env.reducedMotion}
+              onInteract={() => setEngaged(true)}
+              onOpenPlace={openPlace}
+            />
+          </SceneBoundary>
         </div>
       )}
       {isReady && env?.touch && !exploring && (
