@@ -6,7 +6,6 @@ import { SatelliteIcon } from "../ui/icons";
 export function SiteFooter() {
   return (
     <footer
-      id="team"
       className="mt-auto flex flex-col gap-4 border-t border-white/7 px-5 py-8 lg:flex-row lg:items-center lg:justify-between lg:px-20"
     >
       <div className="flex items-center gap-3">
@@ -21,7 +20,13 @@ export function SiteFooter() {
           Method
         </Link>
         <Link
-          href="/#team"
+          href="/satellites"
+          className="inline-flex min-h-11 items-center text-[14px] font-semibold text-gold-soft hover:text-gold-pale"
+        >
+          Satellites
+        </Link>
+        <Link
+          href="/team"
           className="inline-flex min-h-11 items-center text-[14px] font-semibold text-gold-soft hover:text-gold-pale"
         >
           Team

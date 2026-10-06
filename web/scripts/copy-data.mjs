@@ -34,4 +34,13 @@ if (!existsSync(METHODS)) {
   process.exit(1);
 }
 cpSync(METHODS, join(TARGET, "METHODS.md"));
+
+// The frozen list of tests in the false-discovery-rate family (the /methods chart reads it).
+const FAMILY = join(SOURCE, "fdr_family.json");
+if (!existsSync(FAMILY)) {
+  console.error(`copy-data: ${FAMILY} not found.`);
+  process.exit(1);
+}
+cpSync(FAMILY, join(TARGET, "fdr_family.json"));
+console.log("copy-data: fdr_family.json from data/");
 console.log("copy-data: METHODS.md from docs/");

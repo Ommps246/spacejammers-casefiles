@@ -5,12 +5,12 @@ import { LogoMark } from "../ui/Logo";
 
 type NavLink = { href: string; label: string };
 
-// The Team page doesn't exist yet: it points at the footer. Method is docs/METHODS.md rendered at /methods.
+// Method is docs/METHODS.md rendered at /methods, with things to try.
 const LINKS: readonly NavLink[] = [
   { href: "/#cases", label: "Cases" },
   { href: "/methods", label: "Method" },
   { href: "/satellites", label: "Satellites" },
-  { href: "/#team", label: "Team" },
+  { href: "/team", label: "Team" },
 ];
 
 export function SiteHeader({ active = "Cases" }: { active?: string }) {

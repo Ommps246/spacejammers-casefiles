@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { Starfield } from "@/components/site/Starfield";
 import { ModelViewer } from "@/components/witnesses/ModelViewer";
+import { OverpassClock } from "@/components/witnesses/OverpassClock";
 import { WITNESSES, type Witness } from "@/lib/witnesses";
 
 function Fact({ label, children }: { label: string; children: React.ReactNode }) {
@@ -73,6 +74,7 @@ export default function SatellitesPage() {
             </Link>
           </p>
         </header>
+        <OverpassClock />
         <div className="grid gap-5 md:grid-cols-2">
           {WITNESSES.map((w) => (
             <WitnessCard key={w.id} w={w} />

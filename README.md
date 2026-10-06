@@ -72,7 +72,7 @@ npm run build    # fully static: works offline, no API keys
 
 - `pipeline/`: fetch, statistics, case building, the number guard
 - `data/cases/`, `data/narration/`: the case files and their guard-checked narration
-- `web/`: the Next.js site (landing page, case pages, `/methods`)
+- `web/`: the Next.js site (landing page, case pages, `/methods` with three things to try, `/satellites`, `/team`)
 - `docs/METHODS.md`: every statistical choice · `docs/VALIDATION.md` · `docs/screenshots/`
 - `design/`: the approved mockups · `prompts/`: the build sequence, as Claude Code prompts
 

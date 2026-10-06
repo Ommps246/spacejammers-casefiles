@@ -5,7 +5,7 @@ Written so any of us can explain it to a judge in under a minute per point.
 ## 1. Data
 - **NASA POWER** (Langley Research Center): daily temperature, max temperature, rainfall and humidity for a point, 1981 to present. It's built on NASA's MERRA-2 reanalysis, on a grid of about 50 km. **What it can't do:** tell one neighbourhood from another. Our cases describe the wider Chennai region.
 - **GISTEMP v4** (NASA Goddard Institute for Space Studies): the global average temperature anomaly. We use it as context: is Chennai warming faster or slower than the planet?
-- *(Next)* **MODIS** vegetation (NDVI) and land surface temperature through AppEEARS. These get us down to 250 m to 1 km.
+- **MODIS** on NASA's Terra and Aqua satellites, through AppEEARS: vegetation greenness (NDVI, 250 m), land surface temperature (1 km) and land cover type (500 m). We take one pixel per point, so these cases can tell one neighbourhood from another.
 
 ## 2. Remove the seasons
 Chennai is always hotter in May than in January. That's the seasons, not a trend. We subtract each calendar month's 1981–2010 average, so only the departure from normal is left (the anomaly).

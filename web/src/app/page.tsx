@@ -11,7 +11,7 @@ import { loadLanding } from "@/lib/case-cards";
 // case grid → how a case works. Every case fact on this page comes from data/cases and data/narration
 // via loadLanding(): questions, headlines, verdicts, the dot plot, the tags and every number in the stat strip.
 export default async function Home() {
-  const { featured, cards, stats } = await loadLanding();
+  const { featured, cards, stats, walkthrough } = await loadLanding();
 
   return (
     <div className="relative isolate flex min-h-full flex-col overflow-x-clip">
@@ -21,7 +21,7 @@ export default async function Home() {
         <Hero featuredCaseId={featured.id} />
         <FeaturedCase data={featured} />
         <CasesSection cards={cards} stats={stats} />
-        <HowItWorks />
+        <HowItWorks steps={walkthrough} caseId={featured.id} />
       </main>
       <SiteFooter />
     </div>

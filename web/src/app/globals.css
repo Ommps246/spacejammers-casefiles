@@ -124,3 +124,29 @@ body[data-globe-inspect] [data-hero-globe] {
   height: 100vh;
   background: var(--color-space-0);
 }
+
+/* "How a case works": the example rises in when the step changes (opacity + transform only). */
+@keyframes how-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.how-rise {
+  animation: how-rise 280ms var(--ease-case);
+}
+@media (prefers-reduced-motion: reduce) {
+  .how-rise {
+    animation: none;
+  }
+}
+
+/* The judge-question accordions open with a short fade. */
+details[name="judge-questions"][open] > p {
+  animation: how-rise 220ms var(--ease-case);
+}
+@media (prefers-reduced-motion: reduce) {
+  details[name="judge-questions"][open] > p {
+    animation: none;
+  }
+}
