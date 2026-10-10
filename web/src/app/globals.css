@@ -150,3 +150,28 @@ details[name="judge-questions"][open] > p {
     animation: none;
   }
 }
+
+/* Phone menu: the page dims, the panel drops 6 px into place. */
+@keyframes menu-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes menu-fade {
+  from {
+    opacity: 0;
+  }
+}
+.menu-drop {
+  animation: menu-drop 180ms var(--ease-case);
+}
+.menu-fade {
+  animation: menu-fade 180ms var(--ease-case);
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-drop,
+  .menu-fade {
+    animation: none;
+  }
+}
