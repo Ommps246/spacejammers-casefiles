@@ -31,7 +31,7 @@ export type ShiftStats = {
 };
 
 /** The satellite point an exhibit is about (MODIS cases only). */
-export type PointRef = { id: string; name: string };
+export type PointRef = { id: string; name: string; lat?: number; lon?: number };
 
 type EvidenceBase = {
   id: string;
@@ -165,7 +165,8 @@ function parseShiftStats(s: Json, where: string): ShiftStats {
 
 function parsePointRef(raw: unknown, where: string): PointRef {
   if (!isObject(raw)) fail(where, "must be an object");
-  return { id: str(raw, "id", where), name: str(raw, "name", where) };
+  const at = (k: string) => (typeof raw[k] === "number" && Number.isFinite(raw[k]) ? { [k]: raw[k] as number } : {});
+  return { id: str(raw, "id", where), name: str(raw, "name", where), ...at("lat"), ...at("lon") };
 }
 
 function parseEvidence(raw: unknown, i: number): Evidence {

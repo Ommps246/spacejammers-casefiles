@@ -9,11 +9,13 @@ import { FdrLadder } from "@/components/methods/FdrLadder";
 import { PointsMap } from "@/components/methods/PointsMap";
 import { SectionNav, type NavItem } from "@/components/methods/SectionNav";
 import { ShuffleDemo } from "@/components/methods/ShuffleDemo";
+import { TrustPanel } from "@/components/methods/TrustPanel";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { Starfield } from "@/components/site/Starfield";
 import { loadFdrFamily, loadMapPoints, loadShuffleSeries } from "@/lib/load-method-demos";
 import { parseMarkdown, type Block, type Inline } from "@/lib/markdown";
+import { loadTrust } from "@/lib/trust";
 
 const METHODS_FILE = join(process.cwd(), "public", "data", "METHODS.md");
 const QUESTIONS_ID = "likely-judge-questions";
@@ -108,11 +110,12 @@ function Questions({ blocks }: { blocks: Block[] }) {
 }
 
 export default async function MethodsPage() {
-  const [source, family, shuffles, points] = await Promise.all([
+  const [source, family, shuffles, points, trust] = await Promise.all([
     readFile(METHODS_FILE, "utf8"),
     loadFdrFamily(),
     loadShuffleSeries(),
     loadMapPoints(),
+    loadTrust(),
   ]);
   const doc = sections(parseMarkdown(source));
   const demos: Record<string, React.ReactNode> = {
@@ -120,7 +123,10 @@ export default async function MethodsPage() {
     s7: <FdrLadder tests={family} />,
     s8: <PointsMap points={points} />,
   };
-  const nav: NavItem[] = doc.list.map((s) => ({ id: s.id, label: NAV_LABELS[s.id] ?? s.title, demo: s.id in demos }));
+  const nav: NavItem[] = [
+    { id: "trust", label: "Can you trust it?" },
+    ...doc.list.map((s) => ({ id: s.id, label: NAV_LABELS[s.id] ?? s.title, demo: s.id in demos })),
+  ];
 
   return (
     <div className="relative isolate flex min-h-full flex-col overflow-x-clip">
@@ -135,6 +141,7 @@ export default async function MethodsPage() {
             <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true" />
             Sections 3, 7 and 8 have something to try, built from the real case files.
           </p>
+          <TrustPanel checks={trust.checks} studies={trust.studies} />
           {doc.list.map((s) => (
             <section key={s.id} id={s.id} className="group flex scroll-mt-16 flex-col gap-4 pt-8 lg:scroll-mt-8" aria-labelledby={`${s.id}-h`}>
               <h2 id={`${s.id}-h`} className="m-0 text-[24px] font-[650] tracking-[-0.02em] group-target:text-gold-soft">

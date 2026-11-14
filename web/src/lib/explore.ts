@@ -28,6 +28,9 @@ export type ExploreRow = {
   reference: boolean;
   span: string;
   chart: EvidenceView["chart"];
+  /** Where it was measured (the satellite pixel, or the weather grid point); absent for the whole planet. */
+  lat?: number;
+  lon?: number;
 };
 
 export type ExploreVariable = {
@@ -79,6 +82,7 @@ function row(c: CaseFile, e: TrendEvidence, view: EvidenceView): ExploreRow {
     reference,
     span: formatYearSpan(e.stats.start, e.stats.end),
     chart: view.chart,
+    ...(reference ? {} : e.point?.lat !== undefined && e.point.lon !== undefined ? { lat: e.point.lat, lon: e.point.lon } : { lat: c.region.lat, lon: c.region.lon }),
   };
 }
 

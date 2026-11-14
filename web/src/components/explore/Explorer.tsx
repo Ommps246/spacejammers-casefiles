@@ -9,6 +9,7 @@ import { FAMILY_TITLES, tally, type ExploreRow, type ExploreVariable, type Famil
 import { formatP, formatTrend, plural } from "@/lib/format";
 
 import { TrendChart } from "../case/TrendChart";
+import { ExploreMap } from "./ExploreMap";
 import { StrengthLabel } from "../ui/StrengthLabel";
 
 const CHIP = "min-h-11 rounded-full border px-4 text-[14px] font-semibold tracking-[-0.01em] transition-transform duration-150 active:scale-[0.97]";
@@ -215,6 +216,7 @@ export function Explorer({ variables }: { variables: ExploreVariable[] }) {
               {t.rising > 0 && t.falling > 0 && " The same variable moves in opposite directions in different places."}
             </p>
           </div>
+          <ExploreMap rows={v.rows} picked={r.key} onPick={(k) => choose(vi, k)} />
           <div className="flex items-center justify-between px-3 text-[11px] text-tertiary">
             <span>Place</span>
             <span>← falling · rising →</span>

@@ -28,6 +28,9 @@ export default async function ExplorePage() {
             Chennai and the Nilgiris. Choose one to see where it’s changing, by how much, and whether the change is
             significant or could be chance.
           </p>
+          <a href="/methods#trust" className="self-start text-[14px] font-semibold text-gold-soft hover:text-gold-pale">
+            Can you trust the detector? Its tests and published studies →
+          </a>
         </header>
         <Explorer variables={variables} />
       </main>
