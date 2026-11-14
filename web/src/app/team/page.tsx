@@ -28,8 +28,8 @@ const AI_RULES = [
     link: "pipeline/guard.py",
   },
   {
-    title: "Built with an AI coding assistant",
-    body: "We wrote the code with Claude Code. The prompts we used are in the repository, next to tests that plant a known trend and check the detector finds it, and that it rarely raises a false alarm on noise.",
+    title: "Claude Code as our coding assistant",
+    body: "We took assistance from Claude Code to generate much of the code, from prompts we wrote; we reviewed, edited and tested it. The prompts are in the repository, next to tests that plant a known trend and check the detector finds it, and that it rarely raises a false alarm on noise.",
     href: `${REPO}/tree/main/prompts`,
     link: "The prompts",
   },

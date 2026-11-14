@@ -82,8 +82,9 @@ Om Mishra · Anik Paul · Adarsh Rathore · Ashutosh Dash
 
 ## AI use
 
-We used Anthropic's Claude in four places. **Code:** most of `pipeline/` and `web/` was written with Claude Code from the
-prompts in `prompts/`; we reviewed it, and the tests check the detector on planted trends and on noise. **Narration:**
+We used Anthropic's Claude in four places. **Code:** we took assistance from Claude Code, which generated much of `pipeline/`
+and `web/` from prompts we wrote (see `prompts/`); we reviewed, edited and tested it, and the tests check the detector on
+planted trends and on noise. **Narration:**
 the text in `data/narration/` was written by Claude from the case files only, and `pipeline/guard.py` rejects any number
 that isn't in the case file; AI never computes a statistic. **Design:** the mockups in `design/` were made with Claude
 Design. **Method review:** we used Claude to compare trend tests; every choice is explained in `docs/METHODS.md`. The site
