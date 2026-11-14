@@ -1,5 +1,6 @@
-// /team: who built Case Files, how AI was used (and where it wasn't), and the NASA datasets behind it.
-// Names come from the README; the dataset list is read from the case files, so it can't drift from the cases.
+// /team: who built Case Files, how AI was used (and where it wasn't), the NASA datasets behind it, and
+// credits for everything else we used (#credits). Names come from the README; the dataset list is read from
+// the case files, so it can't drift from the cases.
 import Link from "next/link";
 
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -8,6 +9,7 @@ import { Starfield } from "@/components/site/Starfield";
 import type { Dataset } from "@/lib/case-data";
 import { FEATURED_CASE, GRID_CASES } from "@/lib/landing";
 import { loadCase } from "@/lib/load-case";
+import { WITNESSES } from "@/lib/witnesses";
 
 const REPO = "https://github.com/Ommps246/spacejammers-casefiles";
 const TEAM = ["Om Mishra", "Anik Paul", "Adarsh Rathore", "Ashutosh Dash"] as const;
@@ -32,6 +34,45 @@ const AI_RULES = [
     link: "The prompts",
   },
 ] as const;
+
+type Credit = { what: string; credit: string; url?: string };
+
+// Everything on the site that we didn't make ourselves, apart from the NASA datasets listed above.
+const CREDITS: readonly { group: string; items: readonly Credit[] }[] = [
+  {
+    group: "Images and 3D models",
+    items: [
+      ...WITNESSES.map((w) => ({ what: `${w.name} satellite 3D model`, credit: w.modelCredit.label, url: w.modelCredit.url })),
+      {
+        what: "Earth image on the globe",
+        credit: "NASA Blue Marble (NASA Visible Earth), copied from the three-globe example images",
+        url: "https://github.com/vasturiano/three-globe",
+      },
+    ],
+  },
+  {
+    group: "Methods we rely on",
+    items: [
+      { what: "Trend test", credit: "Mann (1945); Kendall (1975)" },
+      { what: "Trend size", credit: "Sen (1968), Journal of the American Statistical Association" },
+      { what: "Block-bootstrap trend test", credit: "Kundzewicz & Robson (2004), Hydrological Sciences Journal; Önöz & Bayazit (2012), Hydrological Processes" },
+      { what: "Change-point test", credit: "Pettitt (1979), Applied Statistics" },
+      { what: "Candidate change points (PELT)", credit: "Killick, Fearnhead & Eckley (2012), Journal of the American Statistical Association" },
+      { what: "False-discovery control", credit: "Benjamini & Hochberg (1995), Journal of the Royal Statistical Society B" },
+      { what: "Global temperature record", credit: "Lenssen et al. (2019), JGR Atmospheres", url: "https://doi.org/10.1029/2018JD029522" },
+      { what: "Heavy-rain threshold (64.5 mm a day)", credit: "India Meteorological Department" },
+    ],
+  },
+  {
+    group: "Open-source software",
+    items: [
+      { what: "Data pipeline", credit: "Python, pandas, NumPy, SciPy, pymannkendall, ruptures, requests, pytest" },
+      { what: "Website", credit: "Next.js, React, three.js, React Three Fiber, drei, Framer Motion, Observable Plot, Tailwind CSS, Vitest" },
+      { what: "3D model optimisation", credit: "glTF Transform", url: "https://gltf-transform.dev/" },
+      { what: "Satellite data access", credit: "NASA AppEEARS (LP DAAC) with a NASA Earthdata login", url: "https://appeears.earthdatacloud.nasa.gov/" },
+    ],
+  },
+];
 
 const initials = (name: string) =>
   name
@@ -110,6 +151,42 @@ export default async function TeamPage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section id="credits" className="flex scroll-mt-6 flex-col gap-5" aria-labelledby="credits-title">
+          <div className="flex flex-col gap-2">
+            <span className="meta text-gold">Credits</span>
+            <h2 id="credits-title" className="m-0 text-title-3">
+              Everything else we used
+            </h2>
+            <p className="m-0 max-w-[760px] text-[15px] leading-[1.55] text-secondary">
+              Our own code and text are open source under the Apache 2.0 licence. The NASA data, images and 3D models
+              belong to NASA and are used as published.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {CREDITS.map((g) => (
+              <div key={g.group} className="glass-card flex flex-col gap-3 p-5">
+                <h3 className="meta m-0 text-gold">{g.group}</h3>
+                <ul className="m-0 flex list-none flex-col gap-3 p-0">
+                  {g.items.map((c) => (
+                    <li key={c.what} className="flex flex-col gap-0.5 border-t border-hairline pt-3 first:border-0 first:pt-0">
+                      <span className="text-[14px] font-semibold text-label">{c.what}</span>
+                      <span className="text-[13px] leading-[1.5] text-secondary">
+                        {c.url ? (
+                          <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-gold-soft hover:underline">
+                            {c.credit} ↗
+                          </a>
+                        ) : (
+                          c.credit
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="flex flex-wrap gap-3" aria-label="More">

@@ -96,6 +96,9 @@ export function HowItWorks({ steps, caseId }: Props) {
         </div>
       </div>
 
+      <Link href="/explore" className="self-start text-[14px] font-semibold text-gold-soft hover:text-gold-pale">
+        Explore: pick a variable, see where it’s changing →
+      </Link>
       <Link href="/methods" className="self-start text-[14px] font-semibold text-gold-soft hover:text-gold-pale">
         Method: every statistical choice, explained →
       </Link>

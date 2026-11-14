@@ -31,6 +31,12 @@ export function SiteFooter() {
         >
           Team
         </Link>
+        <Link
+          href="/team#credits"
+          className="inline-flex min-h-11 items-center text-[14px] font-semibold text-gold-soft hover:text-gold-pale"
+        >
+          Credits
+        </Link>
         <span className="text-[13px] text-secondary">SpaceJammers · Chennai · NASA Space Apps 2026</span>
       </div>
     </footer>

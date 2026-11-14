@@ -1,6 +1,7 @@
 /**
  * "Meet the witnesses": the two NASA satellites whose MODIS instruments supply the satellite cases.
  * Every fact below is quoted from the NASA page listed with it (checked 2026-09-26); nothing is estimated.
+ * Model credits are the Source lines on each model's NASA 3D Resources page (checked 2026-11-06).
  */
 export type Source = { label: string; url: string };
 
@@ -15,6 +16,8 @@ export type Witness = {
   drift: string;
   products: string;
   sources: Source[];
+  /** Who made the 3D model, as credited on its NASA 3D Resources page. */
+  modelCredit: Source;
 };
 
 const TERRA_ABOUT: Source = { label: "NASA Terra: About", url: "https://terra.nasa.gov/about" };
@@ -37,6 +40,7 @@ export const WITNESSES: readonly Witness[] = [
       "Began drifting in February 2020; past 10:15 a.m. by October 2022, and expected past 9:00 a.m. by December 2025",
     products: "MOD11A2 land surface temperature and MOD13Q1 greenness in these cases",
     sources: [TERRA_ABOUT],
+    modelCredit: { label: "NASA/Christian A. Lopez, NASA 3D Resources", url: "https://science.nasa.gov/3d-resources/terra/" },
   },
   {
     id: "aqua",
@@ -49,5 +53,6 @@ export const WITNESSES: readonly Witness[] = [
     drift: "Free drift since December 2021, to later crossing times; expected past 1:45 p.m. by February 2023",
     products: "MYD11A2 land surface temperature: the independent cross-check in the night-heat case",
     sources: [AQUA_20, AQUA_HOME],
+    modelCredit: { label: "NASA/Kevin K. Lane, NASA 3D Resources (Aqua A)", url: "https://science.nasa.gov/3d-resources/aqua-a/" },
   },
 ];

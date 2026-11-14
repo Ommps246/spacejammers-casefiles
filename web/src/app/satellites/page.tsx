@@ -37,6 +37,12 @@ function WitnessCard({ w }: { w: Witness }) {
         <Fact label="In these cases">{w.products}</Fact>
       </dl>
       <p className="m-0 text-[13px] text-secondary">
+        3D model:{" "}
+        <a href={w.modelCredit.url} target="_blank" rel="noopener noreferrer" className="text-gold-soft hover:underline">
+          {w.modelCredit.label}
+        </a>
+      </p>
+      <p className="m-0 -mt-3 text-[13px] text-secondary">
         Source:{" "}
         {w.sources.map((s, i) => (
           <span key={s.url}>

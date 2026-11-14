@@ -79,3 +79,19 @@ npm run build    # fully static: works offline, no API keys
 ## Team
 
 Om Mishra · Anik Paul · Adarsh Rathore · Ashutosh Dash
+
+## AI use
+
+We used Anthropic's Claude in four places. **Code:** most of `pipeline/` and `web/` was written with Claude Code from the
+prompts in `prompts/`; we reviewed it, and the tests check the detector on planted trends and on noise. **Narration:**
+the text in `data/narration/` was written by Claude from the case files only, and `pipeline/guard.py` rejects any number
+that isn't in the case file; AI never computes a statistic. **Design:** the mockups in `design/` were made with Claude
+Design. **Method review:** we used Claude to compare trend tests; every choice is explained in `docs/METHODS.md`. The site
+makes no AI calls while you use it, and no image or video in the project is AI-generated.
+
+## Licence and credits
+
+Our code and text are released under the [Apache License 2.0](LICENSE). NASA data, images and 3D models belong to NASA and
+are used as published: the Terra 3D model is credited to NASA/Christian A. Lopez and the Aqua model to NASA/Kevin K. Lane
+(NASA 3D Resources), and the globe uses NASA's Blue Marble image (copied from the three-globe example images). Every
+dataset, method reference and library we used is listed on the site at `/team#credits`.

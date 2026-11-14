@@ -10,6 +10,7 @@ type NavLink = { href: string; label: string };
 // Method is docs/METHODS.md rendered at /methods, with things to try.
 const LINKS: readonly NavLink[] = [
   { href: "/#cases", label: "Cases" },
+  { href: "/explore", label: "Explore" },
   { href: "/methods", label: "Method" },
   { href: "/satellites", label: "Satellites" },
   { href: "/team", label: "Team" },
