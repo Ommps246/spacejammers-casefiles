@@ -12,7 +12,7 @@ import { loadCase } from "@/lib/load-case";
 import { WITNESSES } from "@/lib/witnesses";
 
 const REPO = "https://github.com/Ommps246/spacejammers-casefiles";
-const TEAM = ["Om Mishra", "Anik Paul", "Adarsh Rathore", "Ashutosh Dash"] as const;
+const TEAM = ["Om Mishra", "Anik Paul", "Ashutosh Dash"] as const;
 
 const AI_RULES = [
   {
@@ -101,7 +101,7 @@ export default async function TeamPage() {
           <p className="m-0 text-body text-secondary">
             NASA Space Apps Challenge 2026, Chennai. Our challenge: <span className="text-label">Be An Earth System Trend Detective!</span>
           </p>
-          <ul className="m-0 grid list-none grid-cols-2 gap-3 p-0 pt-2 sm:grid-cols-4">
+          <ul className="m-0 grid list-none grid-cols-3 gap-2 p-0 pt-2 sm:gap-3">
             {TEAM.map((name) => (
               <li key={name} className="glass-card flex flex-col items-start gap-3 p-4">
                 <span aria-hidden="true" className="flex size-12 items-center justify-center rounded-full border border-gold/40 bg-navy font-mono text-[15px] font-bold text-gold-pale">

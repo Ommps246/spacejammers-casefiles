@@ -1,6 +1,6 @@
 # Team tasks: SpaceJammers
 
-**How we work:** all Claude Code work happens on Om's laptop. Anik and Adarsh own everything that needs a browser, a phone or a brain but no Claude Pro. If someone needs Claude in the final hours, ask Om.
+**How we work:** all Claude Code work happens on Om's laptop. Anik and Ashutosh own everything that needs a browser, a phone or a brain but no Claude Pro. If someone needs Claude in the final hours, ask Om.
 
 ## Om: pipeline, AI, integration (on the laptop)
 - [ ] Run `prompts/01-run-pipeline.md`: fetch NASA data, build the first real cases
@@ -19,7 +19,7 @@
 - [ ] **Validation table** (`docs/VALIDATION.md`): find 2–3 published studies (Google Scholar) on Chennai or Tamil Nadu temperature or heavy-rainfall trends. For each, note the paper, years, dataset and trend reported (e.g. "+0.2 °C/decade, 1970–2015"). We'll compare our numbers with theirs. This is our strongest proof of validity.
 - [ ] Ask one SRM earth-science or civil (hydrology) professor to spend 10 minutes looking at our first case before the event
 
-## Adarsh: story, video, visuals (no code)
+## Story, video, visuals (no code)
 - [ ] **Check the Space Apps rules:** can we write code before the event, or only research and design? Screenshot the rule and send it to the group. This decides how we use the next two weeks.
 - [ ] **30-second video storyboard** (6 frames, one per 5 seconds):
   1. Hook: "Chennai flooded in 2015. Was it a freak event, or a pattern?"

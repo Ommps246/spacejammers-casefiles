@@ -1,7 +1,7 @@
 # Prompt 03: the web app (Apple-grade, motion with a purpose)
 
 Run this after prompts 01 and 02 have produced data/cases and data/narration.
-Ask Claude before this step if you have the satellite .glb from Adarsh: it goes in web/public/models/.
+Ask Claude before this step if you have the satellite .glb: it goes in web/public/models/.
 
 ```
 Read CLAUDE.md (especially "Frontend" and "Design language").

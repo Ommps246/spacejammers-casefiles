@@ -78,7 +78,7 @@ npm run build    # fully static: works offline, no API keys
 
 ## Team
 
-Om Mishra · Anik Paul · Adarsh Rathore · Ashutosh Dash
+Om Mishra · Anik Paul · Ashutosh Dash
 
 ## AI use
 
