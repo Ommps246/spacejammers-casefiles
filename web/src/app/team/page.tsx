@@ -48,6 +48,7 @@ const CREDITS: readonly { group: string; items: readonly Credit[] }[] = [
         credit: "NASA Blue Marble (NASA Visible Earth), copied from the three-globe example images",
         url: "https://github.com/vasturiano/three-globe",
       },
+      { what: "Land and coastline on the maps", credit: "Natural Earth 1:10m land (public domain)", url: "https://www.naturalearthdata.com/" },
     ],
   },
   {

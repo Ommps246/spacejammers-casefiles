@@ -1,9 +1,10 @@
 "use client";
 // Section 8, made visible: where the Chennai satellite points sit, what MODIS calls the ground at each one,
-// and which three are allowed to be the countryside reference. A sketch map: positions are true, the coast isn't drawn.
+// and which three are allowed to be the countryside reference. Positions are true; the land shape is Natural Earth.
 import { useState } from "react";
 
 import { formatP, formatTrend } from "@/lib/format";
+import { CHENNAI_LAND } from "@/lib/coast";
 import { kmOffset, type MapPoint } from "@/lib/method-demos";
 
 import { StrengthLabel } from "../ui/StrengthLabel";
@@ -47,6 +48,10 @@ export function PointsMap({ points }: { points: MapPoint[] }) {
   const midN = (Math.max(...north) + Math.min(...north)) / 2;
   const x = (e: number) => SIZE / 2 + (e - midE) * scale;
   const y = (n: number) => SIZE / 2 - (n - midN) * scale;
+  const land = CHENNAI_LAND.map(([lon, lat], i) => {
+    const k = kmOffset(centre, { lat, lon });
+    return `${i ? "L" : "M"}${x(k.east).toFixed(1)},${y(k.north).toFixed(1)}`;
+  }).join(" ") + " Z";
 
   return (
     <figure className="glass-card m-0 flex flex-col gap-4 p-4 lg:p-6">
@@ -61,6 +66,8 @@ export function PointsMap({ points }: { points: MapPoint[] }) {
 
       <div className="grid items-start gap-4 md:grid-cols-[minmax(0,1fr)_240px]">
         <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="block h-auto w-full rounded-tile border border-hairline bg-space-0/60" role="group" aria-label="Sketch map of the eight Chennai satellite points">
+          <rect width={SIZE} height={SIZE} fill="rgb(16 34 66 / 0.55)" />
+          <path d={land} fill="rgb(38 44 52)" stroke="rgb(140 170 210 / 0.35)" strokeWidth="1" />
           {RINGS_KM.map((km) => (
             <g key={km}>
               <circle cx={x(0)} cy={y(0)} r={km * scale} fill="none" stroke="rgb(255 255 255 / 0.1)" strokeDasharray="3 5" />
@@ -149,8 +156,8 @@ export function PointsMap({ points }: { points: MapPoint[] }) {
         ))}
       </div>
       <p className="m-0 text-[12px] leading-[1.5] text-tertiary">
-        Sketch map: the positions and distances are real, with rings measured from the Chennai core point. The coast
-        and roads aren’t drawn.
+        Positions and distances are real, with rings measured from the Chennai core point. Land and coast from
+        Natural Earth; roads and rivers aren’t drawn.
       </p>
     </figure>
   );

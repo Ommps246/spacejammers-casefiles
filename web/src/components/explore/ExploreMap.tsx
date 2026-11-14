@@ -2,6 +2,8 @@
 // "Where is it changing?": every place measured for the chosen variable, on a sketch map. Up and down
 // triangles are clear rises and falls (they passed the multiple-test check); circles are no clear trend.
 // Colour is the strength. Places far from Chennai (the Nilgiris) sit in an inset with their distance.
+// The land shape is Natural Earth (public domain), drawn on the same scale as the places.
+import { CHENNAI_LAND } from "@/lib/coast";
 import { kmOffset } from "@/lib/method-demos";
 import type { ExploreRow } from "@/lib/explore";
 
@@ -49,11 +51,22 @@ export function ExploreMap({ rows, picked, onPick }: { rows: ExploreRow[]; picke
   ];
   const farKm = far.length ? Math.round(Math.hypot(kmOffset(CHENNAI, far[0]).east, kmOffset(CHENNAI, far[0]).north) / 10) * 10 : 0;
   const bar = 25 * scale;
+  const land = CHENNAI_LAND.map(([lon, lat], i) => {
+    const k = kmOffset(CHENNAI, { lat, lon });
+    return `${i ? "L" : "M"}${(cx + (k.east - midE) * scale).toFixed(1)},${(H / 2 - (k.north - midN) * scale).toFixed(1)}`;
+  }).join(" ") + " Z";
   const active = placed.find((p) => p.r.key === picked);
 
   return (
     <figure className="m-0 flex flex-col gap-2">
       <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full rounded-tile border border-hairline bg-space-0/60" role="group" aria-label="Map of where this variable is rising, falling or showing no clear trend">
+        <defs>
+          <clipPath id="explore-main">
+            <rect x={x0} y={0} width={W - x0} height={H} />
+          </clipPath>
+        </defs>
+        <rect x={x0} y={0} width={W - x0} height={H} fill="rgb(16 34 66 / 0.55)" />
+        <path d={land} clipPath="url(#explore-main)" fill="rgb(38 44 52)" stroke="rgb(140 170 210 / 0.35)" strokeWidth="1" />
         {far.length > 0 && (
           <g>
             <line x1={INSET} x2={INSET} y1={12} y2={H - 12} stroke="rgb(255 255 255 / 0.18)" strokeDasharray="3 4" />
@@ -118,7 +131,7 @@ export function ExploreMap({ rows, picked, onPick }: { rows: ExploreRow[]; picke
           <svg width="12" height="12" viewBox="-10 -10 20 20" aria-hidden="true"><circle r="6.5" fill="none" stroke="currentColor" strokeWidth="2.5" /></svg>
           no clear trend
         </span>
-        <span>Sketch map: positions and distances are real; the coast isn’t drawn.</span>
+        <span>Land and coast: Natural Earth. Positions and distances are real.</span>
       </figcaption>
     </figure>
   );
